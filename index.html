@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0c0d">
+  <meta name="description" content="DnB Radar: ellenőrzött budapesti drum & bass események, hivatalos esemény- és jegylinkekkel.">
+  <title>DnB Radar — Budapest drum & bass események</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#esemenyek">Ugrás az eseményekhez</a>
+  <div class="page-shell">
+    <header class="topbar wrap">
+      <a href="#top" class="brand" aria-label="DnB Radar kezdőlap">DnB Radar</a>
+      <a class="toplink" href="#mukodes">Az oldalról</a>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">BUDAPEST / DRUM & BASS</div>
+          <h1 id="hero-title">Budapesti drum & bass események</h1>
+          <p>Dátumok, fellépők és helyszínek. Minden eseménynél közvetlen link a szervező, a helyszín vagy a jegyértékesítő oldalára.</p>
+          <a class="primary-btn" href="#esemenyek">Események megtekintése <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="events-section" id="esemenyek" aria-labelledby="events-title">
+        <div class="wrap">
+          <div class="section-head"><h2 id="events-title">Közelgő programok</h2><p class="updated" id="updated">Ellenőrzött adatok betöltése…</p></div>
+          <div id="event-list" class="event-list" aria-live="polite"></div>
+          <div id="empty" class="empty" hidden><h3>Nincs közelgő program</h3><p>Jelenleg nincs igazolt közelgő budapesti esemény a listában.</p></div>
+        </div>
+      </section>
+
+      <section class="info-section wrap" id="mukodes" aria-labelledby="info-title"><div><p class="overline">AZ OLDALRÓL</p><h2 id="info-title">Források és frissítés</h2></div><div class="info-copy"><p>Az eseményeket kézzel ellenőrizzük a szervezők, helyszínek vagy hivatalos jegyoldalak alapján. Csak budapesti, jövőbeli program kerül fel.</p><p>A program és a jegyek változhatnak. Indulás előtt nézd meg az adott esemény hivatalos oldalát. Az itt szereplő lista válogatás, nem teljes városi programnaptár.</p></div></section>
+    </main>
+
+    <footer class="footer"><div class="wrap foot-inner"><div class="brand">DnB Radar</div><p>Budapesti drum & bass eseménynaptár</p><a href="#top">Vissza az elejére ↑</a></div></footer>
+  </div>
+</body>
+</html>

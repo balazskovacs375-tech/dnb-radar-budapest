@@ -1,0 +1,60 @@
+{
+  "updatedAt": "2026-10-27",
+  "events": [
+    {
+      "id": "drum-club-halloween-2026",
+      "date": "2026-10-30",
+      "time": "23:00",
+      "title": "Drum Club Halloween",
+      "artists": ["Hated", "Shaymi", "Fiyuu", "Memento", "Vorside"],
+      "venue": "Stenk Lelátó",
+      "address": "Kerepesi út 9., 1087 Budapest",
+      "url": "https://bladerunnaz.hu/en/event/drum-club-halloween",
+      "linkLabel": "Hivatalos esemény"
+    },
+    {
+      "id": "therapy-halloween-2026",
+      "date": "2026-10-31",
+      "time": "23:00",
+      "title": "Therapy Sessions Halloween",
+      "artists": ["Zardonic", "Counterstrike", "Fragz"],
+      "venue": "Kassa (Hajó)",
+      "address": "Szilágyi Dezső tér, 1011 Budapest",
+      "url": "https://cooltix.hu/event/6ab01341808d111e1508acb7",
+      "linkLabel": "Hivatalos jegyoldal"
+    },
+    {
+      "id": "ivy-lab-2026",
+      "date": "2026-11-14",
+      "time": "23:00",
+      "title": "The Hive: Ivy Lab",
+      "artists": ["Ivy Lab"],
+      "venue": "Kassa (Hajó)",
+      "address": "Szilágyi Dezső tér, 1011 Budapest",
+      "url": "https://cooltix.at/event/6aa93b1db851176d719dc023",
+      "linkLabel": "Hivatalos jegyoldal"
+    },
+    {
+      "id": "boiler-room-worship-2026",
+      "date": "2026-11-19",
+      "time": "19:00",
+      "title": "Boiler Room Budapest w/ WORSHIP",
+      "artists": ["Sub Focus", "Dimension", "Culture Shock", "1991"],
+      "venue": "Arzenál",
+      "address": "Soroksári út 158/C, 1095 Budapest",
+      "url": "https://direct.oneticket.hu/events/boiler-room-budapest-w-worship",
+      "linkLabel": "Hivatalos jegyoldal"
+    },
+    {
+      "id": "kanine-2026",
+      "date": "2026-11-27",
+      "time": "23:30",
+      "title": "Bladerunnaz: Kanine",
+      "artists": ["Kanine"],
+      "venue": "A38 Hajó",
+      "address": "Petőfi híd budai hídfő, 1117 Budapest",
+      "url": "https://www.a38.hu/hu/program/bladerunnaz-kanine-uk-reflections-ukeu-tour",
+      "linkLabel": "Hivatalos esemény / jegyek"
+    }
+  ]
+}
