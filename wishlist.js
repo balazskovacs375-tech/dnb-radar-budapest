@@ -15,6 +15,8 @@ function setWishlistStatus(key) {
   wishlistStatus.textContent = wishlistI18n.t(key);
 }
 
+setWishlistStatus('wishlistStatusInitial');
+
 function fetchWishes() {
   return new Promise((resolve, reject) => {
     const callback = `dnbRadarWishes_${Date.now()}_${++requestNumber}`;
