@@ -69,3 +69,27 @@ h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 .language-switch button[aria-pressed="true"],.language-switch button:hover{color:var(--accent)}
 .language-switch span{color:#687468}
 @media(max-width:760px){html[lang="hu"] h1{font-size:clamp(27px,8.3vw,48px)}}
+
+/* Larger tap targets and a shorter route from the heading to the programme. */
+.language-switch button{min-width:44px;min-height:44px}
+.event-details{margin-top:10px}
+.event-details summary{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 0;line-height:1.35;list-style:none}
+.event-details summary::-webkit-details-marker{display:none}
+.event-details summary::before{content:'+';flex:none;width:16px;color:var(--accent);font-size:20px;font-weight:400;line-height:1}
+.event-details[open] summary::before{content:'−'}
+.event-link{display:flex;align-items:center;justify-content:center;min-height:44px;width:100%;padding:10px 13px;border:1px solid var(--accent);border-radius:2px;text-align:center;text-decoration:none}
+.event-link:hover{background:var(--accent);color:#141715;text-decoration:none}
+.spotify-choice{min-height:44px}
+.wishlist-fields input{min-height:48px}
+@media(max-width:760px){
+  .hero{padding-top:38px;padding-bottom:42px}
+  h1,html[lang="hu"] h1{font-size:clamp(26px,8.2vw,45px);margin:17px 0 18px;line-height:.98}
+  .hero-copy>p{font-size:14px;line-height:1.55}
+  .events-section{padding-top:41px;padding-bottom:54px}
+  .section-head{margin-bottom:24px}
+  .updated{margin-top:10px}
+  .event-card{column-gap:11px;row-gap:8px;padding:21px 0}
+  .event-actions{grid-column:1/-1;align-items:stretch;gap:10px;width:100%;margin-top:1px;text-align:left}
+  .event-link{font-size:13px}
+  .wishlist-section{padding-top:54px;padding-bottom:58px}
+}
