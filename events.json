@@ -1,1 +1,248 @@
-{"updatedAt":"2026-11-05","events":[{"id":"eclips-sota-2026","date":"2026-11-13","time":"23:00","title":"ECLIPS: SOTA","artists":["SOTA"],"venue":"Kassa (Hajó)","address":"Szilágyi Dezső tér, 1011 Budapest","url":"https://cooltix.hu/event/6abba6e1cb6a92dc45c58a9b","linkLabel":"Hivatalos jegyoldal"},{"id":"ivy-lab-2026","date":"2026-11-14","time":"23:00","title":"The Hive: Ivy Lab","artists":["Ivy Lab"],"venue":"Kassa (Hajó)","address":"Szilágyi Dezső tér, 1011 Budapest","url":"https://cooltix.at/event/6aa93b1db851176d719dc023","linkLabel":"Hivatalos jegyoldal"},{"id":"boiler-room-worship-2026","date":"2026-11-19","time":"19:00","title":"Boiler Room Budapest w/ WORSHIP","artists":["Sub Focus","Dimension","Culture Shock","1991"],"venue":"Arzenál","address":"Soroksári út 158/C, 1095 Budapest","url":"https://direct.oneticket.hu/events/boiler-room-budapest-w-worship","linkLabel":"Hivatalos jegyoldal"},{"id":"kanine-2026","date":"2026-11-27","time":"23:30","title":"Bladerunnaz: Kanine","artists":["Kanine"],"venue":"A38 Hajó","address":"Petőfi híd budai hídfő, 1117 Budapest","url":"https://www.a38.hu/hu/program/bladerunnaz-kanine-uk-reflections-ukeu-tour","linkLabel":"Hivatalos esemény (telt ház)"},{"id":"beat-safari-zigi-sc-2026","date":"2026-12-04","time":"23:00","title":"Beat Safari: Zigi SC","artists":["Zigi SC","Damien","Magematix","Fouria","Darthp","Yorinobu"],"venue":"Dürer Kert","address":"Öböl utca 1., 1117 Budapest","url":"https://www.durerkert.com/event/beat_safari_2026","linkLabel":"Hivatalos esemény / jegyek"},{"id":"right-time-rupture-2026","date":"2026-12-18","time":"22:00","title":"RIGHT TIME: 20 Years of Rupture","artists":["Double O","Decibella","Blackeye MC","Panka","Mentalien","Benc","Aikatherina"],"venue":"Atno","address":"Zsilip utca 17., 1044 Budapest","url":"https://cooltix.hu/event/6ab037d32b9a0f466bcd8ca9","linkLabel":"Hivatalos jegyoldal"},{"id":"metrik-goddard-emily-makis-2026","date":"2026-12-19","time":"23:30","title":"Bladerunnaz: Metrik – goddard. – Emily Makis","artists":["Metrik","goddard.","Emily Makis","IAN Autorun","Shaymi"],"venue":"Akvárium Klub","address":"Erzsébet tér 12., 1051 Budapest","url":"https://bladerunnaz.hu/en/event/bladerunnaz-pres-metrik-goddard-emily-makis","linkLabel":"Hivatalos esemény / jegyek"},{"id":"a38-good-old-days-2026","date":"2026-12-30","time":"23:30","title":"A38 Előszilveszter: Good Old Days XI.","artists":["Ninjabreakz DJs","Ludmilla","Ster"],"venue":"A38 Hajó","address":"Petőfi híd budai hídfő, 1117 Budapest","url":"https://www.a38.hu/hu/program/ludmilla-32281","linkLabel":"Hivatalos esemény / jegyek"},{"id":"bladerunnaz-mozey-2027","date":"2027-01-30","time":"23:30","title":"Bladerunnaz: Mozey","artists":["Mozey","Shaymi","Winstone","Canax"],"venue":"Akvárium Klub","address":"Erzsébet tér 12., 1051 Budapest","url":"https://bladerunnaz.hu/esemeny/bladerunnaz-pres-mozey","linkLabel":"Hivatalos esemény / jegyek"}]}
+{
+  "updatedAt": "2026-11-05",
+  "events": [
+    {
+      "id": "eclips-sota-2026",
+      "date": "2026-11-13",
+      "time": "23:00",
+      "title": "ECLIPS: SOTA",
+      "artists": [
+        "SOTA"
+      ],
+      "venue": "Kassa (Hajó)",
+      "address": "Szilágyi Dezső tér, 1011 Budapest",
+      "url": "https://cooltix.hu/event/6abba6e1cb6a92dc45c58a9b",
+      "linkLabel": "Hivatalos jegyoldal",
+      "description": "SOTA brit drum & bass producer. A Kassa hajón az ECLIPS sorozat vendége; a szervező energikus szettet és saját zenéit, remixeit emeli ki.",
+      "spotifyArtists": [
+        {
+          "name": "SOTA",
+          "id": "78UYwUXnotbqcp2NTxjujP"
+        }
+      ],
+      "price": {
+        "amountHuf": 7000,
+        "note": "A Cooltix 2nd Release jegye; szolgáltatási díj hozzáadódhat.",
+        "checkedAt": "2026-11-05",
+        "sourceUrl": "https://cooltix.hu/event/6abba6e1cb6a92dc45c58a9b"
+      }
+    },
+    {
+      "id": "ivy-lab-2026",
+      "date": "2026-11-14",
+      "time": "23:00",
+      "title": "The Hive: Ivy Lab",
+      "artists": [
+        "Ivy Lab",
+        "D:Enigma"
+      ],
+      "venue": "Kassa (Hajó)",
+      "address": "Szilágyi Dezső tér, 1011 Budapest",
+      "url": "https://cooltix.at/event/6aa93b1db851176d719dc023",
+      "linkLabel": "Hivatalos jegyoldal",
+      "description": "Az Ivy Lab bass music formáció budapesti állomása a búcsúturné része. A szervező szerint D:Enigma is fellép, aki az Ivy Lab 20/20 kiadójához kötődik.",
+      "spotifyArtists": [
+        {
+          "name": "Ivy Lab",
+          "id": "3VXCvo9Sr0hbZ4mk6VOKBs"
+        }
+      ],
+      "price": {
+        "amountHuf": 7000,
+        "note": "A Cooltix Regular Bee jegye; szolgáltatási díj hozzáadódhat.",
+        "checkedAt": "2026-11-05",
+        "sourceUrl": "https://cooltix.at/event/6aa93b1db851176d719dc023"
+      }
+    },
+    {
+      "id": "boiler-room-worship-2026",
+      "date": "2026-11-19",
+      "time": "19:00",
+      "title": "Boiler Room Budapest w/ WORSHIP",
+      "artists": [
+        "Sub Focus",
+        "Dimension",
+        "Culture Shock",
+        "1991"
+      ],
+      "venue": "Arzenál",
+      "address": "Soroksári út 158/C, 1095 Budapest",
+      "url": "https://direct.oneticket.hu/events/boiler-room-budapest-w-worship",
+      "linkLabel": "Hivatalos jegyoldal",
+      "description": "A WORSHIP esten Sub Focus, Dimension, Culture Shock és 1991 közös, egymásba játszott szettje szerepel a hivatalos programban.",
+      "spotifyArtists": [
+        {
+          "name": "Sub Focus",
+          "id": "0QaSiI5TLA4N7mcsdxShDO"
+        },
+        {
+          "name": "Dimension",
+          "id": "1QMgre3BHX161ZHtWMUu6S"
+        },
+        {
+          "name": "Culture Shock",
+          "id": "6lp2VnIRXXpC9Wz7hSX6RE"
+        },
+        {
+          "name": "1991",
+          "id": "2IP71LH7CbwddhsEXBI0fy"
+        }
+      ],
+      "price": {
+        "amountHuf": 17000,
+        "note": "Időkorlátos jegy: belépés csak 20:00 előtt. Ezen felül rendszerhasználati díj fizetendő.",
+        "checkedAt": "2026-11-05",
+        "sourceUrl": "https://direct.oneticket.hu/events/boiler-room-budapest-w-worship"
+      }
+    },
+    {
+      "id": "kanine-2026",
+      "date": "2026-11-27",
+      "time": "23:30",
+      "title": "Bladerunnaz: Kanine",
+      "artists": [
+        "Kanine"
+      ],
+      "venue": "A38 Hajó",
+      "address": "Petőfi híd budai hídfő, 1117 Budapest",
+      "url": "https://www.a38.hu/hu/program/bladerunnaz-kanine-uk-reflections-ukeu-tour",
+      "linkLabel": "Hivatalos esemény (telt ház)",
+      "description": "Kanine dancefloor drum & bass producer. Az A38-on a Reflections turnéval lép fel; a helyszín jelenleg telt házat jelez.",
+      "spotifyArtists": [
+        {
+          "name": "Kanine",
+          "id": "1KiNUGL3r0GgyLwqYCY1yV"
+        }
+      ]
+    },
+    {
+      "id": "beat-safari-zigi-sc-2026",
+      "date": "2026-12-04",
+      "time": "23:00",
+      "title": "Beat Safari: Zigi SC",
+      "artists": [
+        "Zigi SC",
+        "Damien",
+        "Magematix",
+        "Fouria",
+        "Darthp",
+        "Yorinobu",
+        "PARANO!D"
+      ],
+      "venue": "Dürer Kert",
+      "address": "Öböl utca 1., 1117 Budapest",
+      "url": "https://www.durerkert.com/event/beat_safari_2026",
+      "linkLabel": "Hivatalos esemény / jegyek",
+      "description": "Zigi SC cseh DJ és producer, a Darkshire csapatából érkezik. A Beat Safari szerint neurofunkra épülő Hybrid Evolution szettet hoz.",
+      "spotifyArtists": [
+        {
+          "name": "Zigi SC",
+          "id": "0PwicFShwzAVmH49Tm4zj0"
+        }
+      ],
+      "price": {
+        "amountHuf": 3500,
+        "note": "Early Bird jegy; a szervező szerint nincs külön kezelési díj.",
+        "checkedAt": "2026-11-05",
+        "sourceUrl": "https://beatsafaridnb.com/tickets?event=zigi-sc-2026-12-04&lang=hu"
+      }
+    },
+    {
+      "id": "right-time-rupture-2026",
+      "date": "2026-12-18",
+      "time": "22:00",
+      "title": "RIGHT TIME: 20 Years of Rupture",
+      "artists": [
+        "Double O",
+        "Decibella",
+        "Blackeye MC",
+        "Panka",
+        "Mentalien",
+        "Benc",
+        "Aikatherina"
+      ],
+      "venue": "Atno",
+      "address": "Zsilip utca 17., 1044 Budapest",
+      "url": "https://cooltix.hu/event/6ab037d32b9a0f466bcd8ca9",
+      "linkLabel": "Hivatalos jegyoldal",
+      "description": "A londoni Rupture sorozat 20 éves jubileuma először jut Budapestre. A fellépők között az alapító Double O, a rezidens Decibella és Blackeye MC szerepel.",
+      "price": {
+        "amountHuf": 6000,
+        "note": "A Cooltix Pre-Sale jegye; szolgáltatási díj hozzáadódhat.",
+        "checkedAt": "2026-11-05",
+        "sourceUrl": "https://cooltix.hu/event/6ab037d32b9a0f466bcd8ca9"
+      }
+    },
+    {
+      "id": "metrik-goddard-emily-makis-2026",
+      "date": "2026-12-19",
+      "time": "23:30",
+      "title": "Bladerunnaz: Metrik – goddard. – Emily Makis",
+      "artists": [
+        "Metrik",
+        "goddard.",
+        "Emily Makis",
+        "IAN Autorun",
+        "Shaymi"
+      ],
+      "venue": "Akvárium Klub",
+      "address": "Erzsébet tér 12., 1051 Budapest",
+      "url": "https://bladerunnaz.hu/en/event/bladerunnaz-pres-metrik-goddard-emily-makis",
+      "linkLabel": "Hivatalos esemény / jegyek",
+      "description": "A Bladerunnaz három brit vendéget hoz: Metrik dancefloor hangzását, goddard. friss UK drum & bass zenéit és Emily Makis énekes produkcióját.",
+      "spotifyArtists": [
+        {
+          "name": "Metrik",
+          "id": "2NCEtX40i9lLNpTg2X5583"
+        },
+        {
+          "name": "goddard.",
+          "id": "3yDDYheQFqfhKZXdjFQuuP"
+        },
+        {
+          "name": "Emily Makis",
+          "id": "51ferxocEKt0vjxzUsqyFX"
+        }
+      ]
+    },
+    {
+      "id": "a38-good-old-days-2026",
+      "date": "2026-12-30",
+      "time": "23:30",
+      "title": "A38 Előszilveszter: Good Old Days XI.",
+      "artists": [
+        "Ninjabreakz DJs",
+        "Ludmilla",
+        "Ster"
+      ],
+      "venue": "A38 Hajó",
+      "address": "Petőfi híd budai hídfő, 1117 Budapest",
+      "url": "https://www.a38.hu/hu/program/ludmilla-32281",
+      "linkLabel": "Hivatalos esemény / jegyek",
+      "description": "Klasszikus breakbeat és drum & bass az A38-on. Ludmilla extended szettel, a Ninjabreakz DJs és Ster a régi zenékre épülő válogatással készül."
+    },
+    {
+      "id": "bladerunnaz-mozey-2027",
+      "date": "2027-01-30",
+      "time": "23:30",
+      "title": "Bladerunnaz: Mozey",
+      "artists": [
+        "Mozey",
+        "Shaymi",
+        "Winstone",
+        "Canax"
+      ],
+      "venue": "Akvárium Klub",
+      "address": "Erzsébet tér 12., 1051 Budapest",
+      "url": "https://bladerunnaz.hu/esemeny/bladerunnaz-pres-mozey",
+      "linkLabel": "Hivatalos esemény / jegyek",
+      "description": "Mozey a Club Mozey show-val tér vissza Budapestre. A Bladerunnaz programjában Shaymi, Winstone és Canax is fellép.",
+      "spotifyArtists": [
+        {
+          "name": "Mozey",
+          "id": "1h8wkWuZQKyDiwbLogtoL0"
+        }
+      ]
+    }
+  ]
+}

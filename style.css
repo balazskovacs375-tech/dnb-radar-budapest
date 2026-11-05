@@ -6,3 +6,21 @@
 .info-section{display:grid;grid-template-columns:1fr 1fr;gap:65px;padding-top:82px;padding-bottom:90px}.info-copy{padding-top:5px}.info-copy p{color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:16px}.footer{border-top:1px solid var(--line)}.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:75px}.footer .brand{font-size:17px}.footer p,.footer a{color:var(--muted);font-size:12px;text-decoration:none;margin:0}
 @media(max-width:760px){.wrap{width:min(100% - 34px,1100px)}.topbar{height:66px}.brand{font-size:19px}.hero{padding-top:48px;padding-bottom:55px}h1{font-size:clamp(42px,10vw,64px)}.hero-copy>p{font-size:16px}.events-section{padding-top:59px;padding-bottom:68px}.section-head{display:block;margin-bottom:30px}.updated{margin-top:16px}.event-card{grid-template-columns:50px minmax(0,1fr);gap:12px;padding:20px 0}.event-date strong{font-size:30px}.event-body h3{font-size:18px}.event-link{grid-column:2;padding:1px 0 0}.info-section{display:block;padding-top:68px;padding-bottom:66px}.info-copy{padding-top:24px}.foot-inner{flex-wrap:wrap;padding:22px 0}.footer p{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Compact editorial cards: music stays behind an explicit click. */
+.event-card{align-items:start;grid-template-columns:65px minmax(0,1fr) 190px;gap:24px;padding:28px 0}
+.date-long{display:block;margin:2px 0 9px}
+.event-body h3{font-size:23px;margin-bottom:8px}
+.artists{font-size:14px;margin-bottom:5px}
+.venue{font-size:13px}
+.event-actions{display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px;text-align:right}
+.price{display:flex;flex-direction:column;gap:4px}.price strong{font-size:19px;letter-spacing:-.035em}.price span{color:var(--muted);font-size:11px}
+.sold-out{font-size:14px;color:#ebbd9b}
+.event-link{padding:2px 0;color:var(--accent);white-space:normal;line-height:1.4}
+.event-details{margin-top:15px}.event-details summary{display:list-item;cursor:pointer;color:var(--accent);font-size:13px;font-weight:600;list-style-position:inside}
+.event-details[open] summary{margin-bottom:12px}.description,.price-note,.spotify-hint{font-size:13px;line-height:1.6;color:#c5ccc5;max-width:670px;margin:0 0 9px}
+.price-note,.spotify-hint{color:var(--muted);font-size:12px}.price-source{display:inline-block;color:var(--accent);font-size:12px;margin-bottom:10px;text-decoration:none}
+.spotify-section{margin-top:18px}.detail-label{margin:0 0 9px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.spotify-choices{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:9px}.spotify-choice{border:1px solid #4c554c;border-radius:4px;background:transparent;color:var(--text);padding:7px 10px;font-size:12px}
+.spotify-choice:hover,.spotify-choice[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}.spotify-player{max-width:650px}.spotify-iframe{display:block;width:100%;height:352px;border:0;border-radius:8px}
+@media(max-width:760px){.event-card{grid-template-columns:44px minmax(0,1fr);gap:12px;padding:23px 0}.event-actions{grid-column:2;align-items:flex-start;text-align:left;gap:8px;padding:0}.event-body h3{font-size:19px}.event-details{margin-top:13px}.spotify-iframe{height:352px}.price strong{font-size:18px}}
