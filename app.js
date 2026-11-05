@@ -154,14 +154,14 @@ function card(event) {
 
   const details = node('details', 'event-details');
   details.append(node('summary', '', i18n.t('details')));
-  if (event.description) details.append(node('p', 'description', i18n.language === 'en' ? (event.descriptionEn || event.description) : event.description));
+  if (event.description) body.append(node('p', 'event-description', i18n.language === 'en' ? (event.descriptionEn || event.description) : event.description));
   if (currentPrice(event.price)) {
     details.append(node('p', 'price-note', i18n.language === 'en' ? (event.price.noteEn || event.price.note) : event.price.note));
     if (event.price.sourceUrl !== event.url) details.append(link(i18n.t('priceSource'), event.price.sourceUrl, 'price-source'));
   } else if (!event.linkLabel.includes('telt ház')) {
     details.append(node('p', 'price-note', i18n.t('currentPrice')));
   }
-  if (event.spotifyArtists?.length) details.append(spotifyPlayer(event.spotifyArtists));
+  if (event.spotifyArtists?.length) body.append(spotifyPlayer(event.spotifyArtists));
   const socials = artistSocials(event);
   if (socials) details.append(socials);
   body.append(details);

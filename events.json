@@ -2,6 +2,25 @@
   "updatedAt": "2026-11-05",
   "events": [
     {
+      "id": "right-time-manic-minds-2026",
+      "date": "2026-11-13",
+      "time": "22:00",
+      "title": "RIGHT TIME: MANIC MINDS",
+      "artists": [
+        "Galactic Jackson",
+        "Benc",
+        "Aikatherina",
+        "Mentalien"
+      ],
+      "venue": "Gólya Presszó",
+      "address": "Orczy út 46–48., 1089 Budapest",
+      "url": "https://ra.co/events/2548995",
+      "linkLabel": "Hivatalos eseményoldal",
+      "linkLabelEn": "Official event page",
+      "description": "Galactic Jackson vinyl DJ és lemezgyűjtő; ezen az estén hardcore és jungle szettet játszik. A RIGHT TIME rezidensei Benc, Aikatherina és Mentalien is fellépnek.",
+      "descriptionEn": "Galactic Jackson is a vinyl DJ and record collector, playing a hardcore and jungle set. RIGHT TIME residents Benc, Aikatherina and Mentalien also perform."
+    },
+    {
       "id": "eclips-sota-2026",
       "date": "2026-11-13",
       "time": "23:00",
@@ -30,6 +49,29 @@
         "checkedAt": "2026-11-05",
         "sourceUrl": "https://cooltix.hu/event/6abba6e1cb6a92dc45c58a9b"
       }
+    },
+    {
+      "id": "modestep-a38-2026",
+      "date": "2026-11-13",
+      "time": "23:45",
+      "title": "Next Level: Modestep Live",
+      "artists": [
+        "Modestep"
+      ],
+      "venue": "A38 Hajó",
+      "address": "Petőfi híd budai hídfő, 1117 Budapest",
+      "url": "https://www.a38.hu/en/program/modestep-live-uk",
+      "linkLabel": "Hivatalos esemény / jegyek",
+      "description": "A brit Modestep élő produkciója a dubstep, drum & bass, rock és metal hangzását ötvözi. A turné budapesti állomása az A38 Hajón lesz.",
+      "descriptionEn": "British live act Modestep blends dubstep, drum & bass, rock and metal. Their Budapest tour stop is at A38 Ship.",
+      "spotifyArtists": [
+        {
+          "name": "Modestep",
+          "id": "5zYJziKktyqWwmoAWXrShP",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174a6b5acff1a8c84f2255b2670",
+          "profileUrl": "https://open.spotify.com/artist/5zYJziKktyqWwmoAWXrShP"
+        }
+      ]
     },
     {
       "id": "ivy-lab-2026",
@@ -303,6 +345,29 @@
           "id": "1h8wkWuZQKyDiwbLogtoL0",
           "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174a9d928aff3d4aa4a0c3c78c8",
           "profileUrl": "https://open.spotify.com/artist/1h8wkWuZQKyDiwbLogtoL0"
+        }
+      ]
+    },
+    {
+      "id": "kosheen-akvarium-2027",
+      "date": "2027-02-18",
+      "time": "19:00",
+      "title": "IAM Productions: Kosheen Live",
+      "artists": [
+        "Kosheen"
+      ],
+      "venue": "Akvárium Klub",
+      "address": "Erzsébet tér 12., 1051 Budapest",
+      "url": "https://akvariumklub.hu/programok/iam-productions-presents-kosheen/",
+      "linkLabel": "Hivatalos esemény / jegyek",
+      "description": "A Kosheen brit elektronikus zenekar, amely drum & bass és trip-hop elemeket is ötvöz. Élő koncertjük az Akvárium Klub NagyHalljában lesz; további fellépőket még nem neveztek meg.",
+      "descriptionEn": "Kosheen is a British electronic band whose music blends drum & bass and trip-hop. Their live show is at Akvárium Klub's Main Hall; further performers have not yet been named.",
+      "spotifyArtists": [
+        {
+          "name": "Kosheen",
+          "id": "5squ8uM6fhMQY71t9xobJC",
+          "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616100005174429017fda8f00b27a91f7822",
+          "profileUrl": "https://open.spotify.com/artist/5squ8uM6fhMQY71t9xobJC"
         }
       ]
     }
