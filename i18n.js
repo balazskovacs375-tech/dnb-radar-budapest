@@ -1,6 +1,6 @@
 const messages = {
   hu: {
-    pageTitle: 'Drum And Bass In Budapest — DnB Radar',
+    pageTitle: 'Drum And Bass X Budapest — DnB Radar',
     metaDescription: 'DnB Radar: budapesti drum & bass bulik, fellépői zenék, ellenőrzött jegyárak és hivatalos jegylinkek.',
     skip: 'Ugrás az eseményekhez', brandAria: 'DnB Radar kezdőlap',
     heroIntro: 'Közelgő budapesti bulik. Nézd meg, kik játszanak, hallgass bele a zenéjükbe, és nyisd meg a hivatalos jegyoldalt.',
@@ -29,7 +29,7 @@ const messages = {
     officialEventTickets: 'Hivatalos esemény / jegyek'
   },
   en: {
-    pageTitle: 'Drum And Bass In Budapest — DnB Radar',
+    pageTitle: 'Drum And Bass X Budapest — DnB Radar',
     metaDescription: 'DnB Radar: Budapest drum & bass events, artist music, checked ticket prices and official ticket links.',
     skip: 'Skip to events', brandAria: 'DnB Radar home',
     heroIntro: 'Upcoming nights in Budapest. See who is playing, listen to their music and open the official ticket page.',
