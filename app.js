@@ -60,6 +60,51 @@ function spotifyPlayer(artists) {
   return section;
 }
 
+function artistLine(event) {
+  const row = node('div', 'artist-list');
+  const profiles = new Map((event.spotifyArtists || []).map(artist => [artist.name, artist]));
+  for (const name of event.artists) {
+    const profile = profiles.get(name);
+    if (profile && /^https:\/\/image-cdn-[a-z]+\.spotifycdn\.com\/image\/[A-Za-z0-9]+$/.test(profile.imageUrl)
+        && profile.profileUrl === `https://open.spotify.com/artist/${profile.id}`) {
+      const artistLink = link('', profile.profileUrl, 'artist-with-photo');
+      artistLink.setAttribute('aria-label', `${name} Spotify-profilja, új lapon nyílik`);
+      const photo = node('img', 'artist-photo');
+      photo.src = profile.imageUrl;
+      photo.alt = '';
+      photo.width = 32;
+      photo.height = 32;
+      photo.loading = 'lazy';
+      artistLink.append(photo, node('span', '', name));
+      row.append(artistLink);
+    } else {
+      row.append(node('span', 'artist-name', name));
+    }
+  }
+  return row;
+}
+
+function artistSocials(event) {
+  const entries = [];
+  for (const artist of event.spotifyArtists || []) {
+    if (artist.profileUrl) entries.push([artist.name, 'Spotify', artist.profileUrl]);
+    for (const [platform, url] of Object.entries(artist.socials || {})) entries.push([artist.name, platform, url]);
+  }
+  for (const [name, socials] of Object.entries(event.artistSocials || {})) {
+    for (const [platform, url] of Object.entries(socials)) entries.push([name, platform, url]);
+  }
+  if (!entries.length) return null;
+  const section = node('div', 'artist-socials');
+  section.append(node('p', 'detail-label', 'Ellenőrzött előadói profilok'));
+  const links = node('div', 'artist-social-links');
+  for (const [name, platform, url] of entries) {
+    if (!/^https:\/\//.test(url)) continue;
+    links.append(link(`${name} · ${platform} ↗`, url));
+  }
+  section.append(links);
+  return section;
+}
+
 function card(event) {
   const article = node('article', 'event-card');
   const date = node('div', 'event-date');
@@ -70,7 +115,7 @@ function card(event) {
   const body = node('div', 'event-body');
   body.append(node('p', 'date-long', `${formatDate(event.date)} · ${event.time}`));
   body.append(node('h3', '', event.title));
-  body.append(node('p', 'artists', event.artists.join(' · ')));
+  body.append(artistLine(event));
   body.append(node('p', 'venue', `${event.venue} · ${event.address}`));
 
   const actions = node('div', 'event-actions');
@@ -96,6 +141,8 @@ function card(event) {
     details.append(node('p', 'price-note', 'Aktuális jegyárért nyisd meg a hivatalos oldalt.'));
   }
   if (event.spotifyArtists?.length) details.append(spotifyPlayer(event.spotifyArtists));
+  const socials = artistSocials(event);
+  if (socials) details.append(socials);
   body.append(details);
   article.append(date, body, actions);
   return article;

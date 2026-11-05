@@ -17,7 +17,9 @@
       "spotifyArtists": [
         {
           "name": "SOTA",
-          "id": "78UYwUXnotbqcp2NTxjujP"
+          "id": "78UYwUXnotbqcp2NTxjujP",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab676161000051749ab76d27be26712eda13461a",
+          "profileUrl": "https://open.spotify.com/artist/78UYwUXnotbqcp2NTxjujP"
         }
       ],
       "price": {
@@ -44,7 +46,9 @@
       "spotifyArtists": [
         {
           "name": "Ivy Lab",
-          "id": "3VXCvo9Sr0hbZ4mk6VOKBs"
+          "id": "3VXCvo9Sr0hbZ4mk6VOKBs",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab676161000051743cf026701b09a005058ba19d",
+          "profileUrl": "https://open.spotify.com/artist/3VXCvo9Sr0hbZ4mk6VOKBs"
         }
       ],
       "price": {
@@ -73,19 +77,27 @@
       "spotifyArtists": [
         {
           "name": "Sub Focus",
-          "id": "0QaSiI5TLA4N7mcsdxShDO"
+          "id": "0QaSiI5TLA4N7mcsdxShDO",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000517426fd464ae2464f49024dfdbd",
+          "profileUrl": "https://open.spotify.com/artist/0QaSiI5TLA4N7mcsdxShDO"
         },
         {
           "name": "Dimension",
-          "id": "1QMgre3BHX161ZHtWMUu6S"
+          "id": "1QMgre3BHX161ZHtWMUu6S",
+          "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab676161000051749dea1a4f3aa36a969241e8c2",
+          "profileUrl": "https://open.spotify.com/artist/1QMgre3BHX161ZHtWMUu6S"
         },
         {
           "name": "Culture Shock",
-          "id": "6lp2VnIRXXpC9Wz7hSX6RE"
+          "id": "6lp2VnIRXXpC9Wz7hSX6RE",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab676161000051745d2020d19d909627f247790f",
+          "profileUrl": "https://open.spotify.com/artist/6lp2VnIRXXpC9Wz7hSX6RE"
         },
         {
           "name": "1991",
-          "id": "2IP71LH7CbwddhsEXBI0fy"
+          "id": "2IP71LH7CbwddhsEXBI0fy",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab6761610000517423afa7765c77e8576fa2829e",
+          "profileUrl": "https://open.spotify.com/artist/2IP71LH7CbwddhsEXBI0fy"
         }
       ],
       "price": {
@@ -111,7 +123,9 @@
       "spotifyArtists": [
         {
           "name": "Kanine",
-          "id": "1KiNUGL3r0GgyLwqYCY1yV"
+          "id": "1KiNUGL3r0GgyLwqYCY1yV",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174a68eba5dbcf8bada29b46680",
+          "profileUrl": "https://open.spotify.com/artist/1KiNUGL3r0GgyLwqYCY1yV"
         }
       ]
     },
@@ -137,7 +151,13 @@
       "spotifyArtists": [
         {
           "name": "Zigi SC",
-          "id": "0PwicFShwzAVmH49Tm4zj0"
+          "id": "0PwicFShwzAVmH49Tm4zj0",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab676161000051748b9ef56df3ec990b37d2c37a",
+          "profileUrl": "https://open.spotify.com/artist/0PwicFShwzAVmH49Tm4zj0",
+          "socials": {
+            "Instagram": "https://www.instagram.com/zigi_sc/",
+            "SoundCloud": "https://soundcloud.com/zigisc"
+          }
         }
       ],
       "price": {
@@ -145,6 +165,26 @@
         "note": "Early Bird jegy; a szervező szerint nincs külön kezelési díj.",
         "checkedAt": "2026-11-05",
         "sourceUrl": "https://beatsafaridnb.com/tickets?event=zigi-sc-2026-12-04&lang=hu"
+      },
+      "artistSocials": {
+        "Damien": {
+          "Facebook": "https://www.facebook.com/damienbeatsafari/"
+        },
+        "Magematix": {
+          "Instagram": "https://www.instagram.com/magematix",
+          "Facebook": "https://www.facebook.com/magematix"
+        },
+        "Fouria": {
+          "Instagram": "https://www.instagram.com/fouriadnb/",
+          "Facebook": "https://www.facebook.com/fouriadnb"
+        },
+        "Darthp": {
+          "Instagram": "https://www.instagram.com/darthpetike",
+          "Facebook": "https://www.facebook.com/darthpetike/"
+        },
+        "Yorinobu": {
+          "Facebook": "https://www.facebook.com/yorinobu"
+        }
       }
     },
     {
@@ -193,15 +233,21 @@
       "spotifyArtists": [
         {
           "name": "Metrik",
-          "id": "2NCEtX40i9lLNpTg2X5583"
+          "id": "2NCEtX40i9lLNpTg2X5583",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174f98cac7123d1ccd8e46abd54",
+          "profileUrl": "https://open.spotify.com/artist/2NCEtX40i9lLNpTg2X5583"
         },
         {
           "name": "goddard.",
-          "id": "3yDDYheQFqfhKZXdjFQuuP"
+          "id": "3yDDYheQFqfhKZXdjFQuuP",
+          "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616100005174bd8c95e940b50c05e12d2725",
+          "profileUrl": "https://open.spotify.com/artist/3yDDYheQFqfhKZXdjFQuuP"
         },
         {
           "name": "Emily Makis",
-          "id": "51ferxocEKt0vjxzUsqyFX"
+          "id": "51ferxocEKt0vjxzUsqyFX",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174bbf965c0b0fb82604beaef66",
+          "profileUrl": "https://open.spotify.com/artist/51ferxocEKt0vjxzUsqyFX"
         }
       ]
     },
@@ -240,7 +286,9 @@
       "spotifyArtists": [
         {
           "name": "Mozey",
-          "id": "1h8wkWuZQKyDiwbLogtoL0"
+          "id": "1h8wkWuZQKyDiwbLogtoL0",
+          "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174a9d928aff3d4aa4a0c3c78c8",
+          "profileUrl": "https://open.spotify.com/artist/1h8wkWuZQKyDiwbLogtoL0"
         }
       ]
     }
