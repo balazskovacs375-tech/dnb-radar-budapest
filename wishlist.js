@@ -3,8 +3,17 @@ const wishlistForm = document.getElementById('wishlist-form');
 const wishlistInput = document.getElementById('wishlist-artist');
 const wishlistList = document.getElementById('wishlist-list');
 const wishlistStatus = document.getElementById('wishlist-status');
+const wishlistI18n = window.dnbI18n;
 let knownWishes = [];
 let requestNumber = 0;
+let statusKey = 'wishlistStatusInitial';
+let wishesLoaded = false;
+let wishesFailed = false;
+
+function setWishlistStatus(key) {
+  statusKey = key;
+  wishlistStatus.textContent = wishlistI18n.t(key);
+}
 
 function fetchWishes() {
   return new Promise((resolve, reject) => {
@@ -29,10 +38,12 @@ function fetchWishes() {
 
 function showWishes(items) {
   knownWishes = items;
+  wishesLoaded = true;
+  wishesFailed = false;
   if (!items.length) {
     const empty = document.createElement('p');
     empty.className = 'wishlist-loading';
-    empty.textContent = 'Még nincs kívánság. Írd be az első előadót.';
+    empty.textContent = wishlistI18n.t('wishlistNoWishes');
     wishlistList.replaceChildren(empty);
     return;
   }
@@ -47,7 +58,7 @@ function showWishes(items) {
     const parsed = Date.parse(item.submittedAt);
     if (Number.isFinite(parsed)) {
       date.dateTime = item.submittedAt;
-      date.textContent = new Intl.DateTimeFormat('hu-HU', {timeZone:'Europe/Budapest',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(parsed));
+      date.textContent = new Intl.DateTimeFormat(wishlistI18n.language === 'en' ? 'en-GB' : 'hu-HU', {timeZone:'Europe/Budapest',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(parsed));
     }
     li.append(name, date);
     ul.append(li);
@@ -57,24 +68,31 @@ function showWishes(items) {
 
 async function refreshWishes() {
   try { showWishes(await fetchWishes()); }
-  catch (error) { wishlistList.textContent = error.message; }
+  catch (_) { wishesFailed = true; wishlistList.textContent = wishlistI18n.t('wishlistUnavailable'); }
 }
+
+document.addEventListener('dnb-language-change', () => {
+  wishlistStatus.textContent = wishlistI18n.t(statusKey);
+  if (wishesLoaded) showWishes(knownWishes);
+  else if (wishesFailed) wishlistList.textContent = wishlistI18n.t('wishlistUnavailable');
+  else wishlistList.textContent = wishlistI18n.t('wishesLoading');
+});
 
 wishlistForm.addEventListener('submit', async event => {
   event.preventDefault();
   const artist = wishlistInput.value.trim().replace(/\s+/g, ' ');
   if (artist.length < 2 || artist.length > 70 || /https?:|www\.|[@<>\r\n]/i.test(artist)) {
-    wishlistStatus.textContent = 'Írj be egy 2–70 karakteres előadói nevet, hivatkozás nélkül.';
+    setWishlistStatus('wishlistValidation');
     return;
   }
   if (knownWishes.some(item => item.artist.toLocaleLowerCase() === artist.toLocaleLowerCase())) {
-    wishlistStatus.textContent = 'Ez az előadó már szerepel a listán.';
+    setWishlistStatus('wishlistDuplicate');
     return;
   }
   if (wishlistForm.elements.website.value) return;
   const button = wishlistForm.querySelector('button');
   button.disabled = true;
-  wishlistStatus.textContent = 'Kívánság mentése…';
+  setWishlistStatus('wishlistSaving');
   const nonce = crypto.randomUUID().replaceAll('-', '');
   try {
     await fetch(wishlistApi, {
@@ -91,10 +109,10 @@ wishlistForm.addEventListener('submit', async event => {
         break;
       }
     }
-    wishlistStatus.textContent = found ? 'Felkerült a nyilvános kívánságlistára.' : 'A mentést most nem tudtuk megerősíteni. Frissítsd az oldalt, mielőtt újra elküldöd.';
+    setWishlistStatus(found ? 'wishlistSuccess' : 'wishlistUnconfirmed');
     if (found) wishlistInput.value = '';
   } catch (_) {
-    wishlistStatus.textContent = 'Most nem sikerült elérni a kívánságlistát. Próbáld újra később.';
+    setWishlistStatus('wishlistSubmitFailed');
   } finally { button.disabled = false; }
 });
 

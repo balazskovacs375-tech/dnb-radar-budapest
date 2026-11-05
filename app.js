@@ -1,14 +1,33 @@
 const list = document.getElementById('event-list');
 const empty = document.getElementById('empty');
 const updated = document.getElementById('updated');
+const i18n = window.dnbI18n;
 let events = [];
+let checkedAt = '';
+let loadFailed = false;
 
 function budapestToday() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Budapest', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 }
 
 function formatDate(date) {
-  return new Intl.DateTimeFormat('hu-HU', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'short', timeZone: 'Europe/Budapest' }).format(new Date(`${date}T12:00:00+02:00`));
+  return new Intl.DateTimeFormat(i18n.language === 'en' ? 'en-GB' : 'hu-HU', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'short', timeZone: 'Europe/Budapest' }).format(new Date(`${date}T12:00:00+02:00`));
+}
+
+function shortDate(date) {
+  return i18n.language === 'en'
+    ? new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'Europe/Budapest' }).format(new Date(`${date}T12:00:00+02:00`))
+    : `${date.replaceAll('-', '. ')}.`;
+}
+
+function officialLabel(event) {
+  if (i18n.language === 'hu') return event.linkLabel;
+  const labels = {
+    'Hivatalos jegyoldal': 'officialTickets',
+    'Hivatalos esemény (telt ház)': 'officialSoldOut',
+    'Hivatalos esemény / jegyek': 'officialEventTickets'
+  };
+  return event.linkLabelEn || (labels[event.linkLabel] ? i18n.t(labels[event.linkLabel]) : event.linkLabel);
 }
 
 function node(tag, className, value) {
@@ -33,20 +52,20 @@ function currentPrice(price) {
 
 function spotifyPlayer(artists) {
   const section = node('div', 'spotify-section');
-  section.append(node('p', 'detail-label', 'Zene a Spotifyon'));
+  section.append(node('p', 'detail-label', i18n.t('spotifyLabel')));
   const choices = node('div', 'spotify-choices');
   const player = node('div', 'spotify-player');
-  const hint = node('p', 'spotify-hint', 'A lejátszó csak kattintás után kapcsolódik a Spotifyhoz.');
+  const hint = node('p', 'spotify-hint', i18n.t('spotifyHint'));
   for (const artist of artists) {
     if (!/^[A-Za-z0-9]{22}$/.test(artist.id)) continue;
     const button = node('button', 'spotify-choice', artist.name);
     button.type = 'button';
-    button.setAttribute('aria-label', `${artist.name} zenéi a Spotifyon`);
+    button.setAttribute('aria-label', i18n.language === 'en' ? `Listen to ${artist.name} on Spotify` : `${artist.name} zenéi a Spotifyon`);
     button.setAttribute('aria-pressed', 'false');
     button.addEventListener('click', () => {
       const iframe = node('iframe', 'spotify-iframe');
       iframe.src = `https://open.spotify.com/embed/artist/${artist.id}`;
-      iframe.title = `${artist.name} – Spotify lejátszó`;
+      iframe.title = i18n.language === 'en' ? `${artist.name} – Spotify player` : `${artist.name} – Spotify lejátszó`;
       iframe.loading = 'lazy';
       iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
@@ -68,7 +87,7 @@ function artistLine(event) {
     if (profile && /^https:\/\/image-cdn-[a-z]+\.spotifycdn\.com\/image\/[A-Za-z0-9]+$/.test(profile.imageUrl)
         && profile.profileUrl === `https://open.spotify.com/artist/${profile.id}`) {
       const artistLink = link('', profile.profileUrl, 'artist-with-photo');
-      artistLink.setAttribute('aria-label', `${name} Spotify-profilja, új lapon nyílik`);
+      artistLink.setAttribute('aria-label', i18n.language === 'en' ? `${name} on Spotify, opens in a new tab` : `${name} Spotify-profilja, új lapon nyílik`);
       const photo = node('img', 'artist-photo');
       photo.src = profile.imageUrl;
       photo.alt = '';
@@ -95,7 +114,7 @@ function artistSocials(event) {
   }
   if (!entries.length) return null;
   const section = node('div', 'artist-socials');
-  section.append(node('p', 'detail-label', 'Ellenőrzött előadói profilok'));
+  section.append(node('p', 'detail-label', i18n.t('artistProfiles')));
   const links = node('div', 'artist-social-links');
   for (const [name, platform, url] of entries) {
     if (!/^https:\/\//.test(url)) continue;
@@ -110,7 +129,7 @@ function card(event) {
   const date = node('div', 'event-date');
   date.append(
     node('strong', '', event.date.slice(8)),
-    node('span', '', new Intl.DateTimeFormat('hu-HU', { month: 'short', timeZone: 'Europe/Budapest' }).format(new Date(`${event.date}T12:00:00+02:00`)).replace('.', '').toUpperCase())
+    node('span', '', new Intl.DateTimeFormat(i18n.language === 'en' ? 'en-GB' : 'hu-HU', { month: 'short', timeZone: 'Europe/Budapest' }).format(new Date(`${event.date}T12:00:00+02:00`)).replace('.', '').toUpperCase())
   );
   const body = node('div', 'event-body');
   body.append(node('p', 'date-long', `${formatDate(event.date)} · ${event.time}`));
@@ -121,24 +140,26 @@ function card(event) {
   const actions = node('div', 'event-actions');
   if (currentPrice(event.price)) {
     const price = node('div', 'price');
-    price.append(node('strong', '', `${new Intl.NumberFormat('hu-HU').format(event.price.amountHuf)} Ft-tól`));
-    price.append(node('span', '', `Ellenőrizve: ${event.price.checkedAt.replaceAll('-', '. ')}.`));
+    const amount = new Intl.NumberFormat(i18n.language === 'en' ? 'en-GB' : 'hu-HU').format(event.price.amountHuf);
+    price.append(node('strong', '', i18n.language === 'en' ? `From HUF ${amount}` : `${amount} Ft-tól`));
+    price.append(node('span', '', i18n.language === 'en' ? `Checked: ${shortDate(event.price.checkedAt)}` : `Ellenőrizve: ${shortDate(event.price.checkedAt)}`));
     actions.append(price);
   } else if (event.linkLabel.includes('telt ház')) {
-    actions.append(node('strong', 'sold-out', 'Telt ház'));
+    actions.append(node('strong', 'sold-out', i18n.t('soldOut')));
   }
-  const official = link(`${event.linkLabel} ↗`, event.url, 'event-link');
-  official.setAttribute('aria-label', `${event.title} – ${event.linkLabel}, új lapon nyílik`);
+  const label = officialLabel(event);
+  const official = link(`${label} ↗`, event.url, 'event-link');
+  official.setAttribute('aria-label', i18n.language === 'en' ? `${event.title} – ${label}, opens in a new tab` : `${event.title} – ${label}, új lapon nyílik`);
   actions.append(official);
 
   const details = node('details', 'event-details');
-  details.append(node('summary', '', 'A fellépőkről és a jegyről'));
-  if (event.description) details.append(node('p', 'description', event.description));
+  details.append(node('summary', '', i18n.t('details')));
+  if (event.description) details.append(node('p', 'description', i18n.language === 'en' ? (event.descriptionEn || event.description) : event.description));
   if (currentPrice(event.price)) {
-    details.append(node('p', 'price-note', event.price.note));
-    if (event.price.sourceUrl !== event.url) details.append(link('Ár forrása ↗', event.price.sourceUrl, 'price-source'));
+    details.append(node('p', 'price-note', i18n.language === 'en' ? (event.price.noteEn || event.price.note) : event.price.note));
+    if (event.price.sourceUrl !== event.url) details.append(link(i18n.t('priceSource'), event.price.sourceUrl, 'price-source'));
   } else if (!event.linkLabel.includes('telt ház')) {
-    details.append(node('p', 'price-note', 'Aktuális jegyárért nyisd meg a hivatalos oldalt.'));
+    details.append(node('p', 'price-note', i18n.t('currentPrice')));
   }
   if (event.spotifyArtists?.length) details.append(spotifyPlayer(event.spotifyArtists));
   const socials = artistSocials(event);
@@ -149,20 +170,28 @@ function card(event) {
 }
 
 function render() {
+  if (loadFailed) {
+    updated.textContent = i18n.t('eventsUnavailable');
+    empty.querySelector('h3').textContent = i18n.t('eventsUnavailableTitle');
+    empty.querySelector('p').textContent = i18n.t('retryLater');
+    empty.hidden = false;
+    return;
+  }
+  if (checkedAt) updated.textContent = i18n.language === 'en' ? `Last checked: ${shortDate(checkedAt)}` : `Utolsó ellenőrzés: ${shortDate(checkedAt)}`;
   list.replaceChildren(...events.map(card));
   empty.hidden = events.length > 0;
 }
+
+document.addEventListener('dnb-language-change', render);
 
 fetch('events.json', { cache: 'no-store' }).then(response => {
   if (!response.ok) throw new Error('Az adatfájl nem tölthető be.');
   return response.json();
 }).then(data => {
-  updated.textContent = `Utolsó ellenőrzés: ${data.updatedAt.replaceAll('-', '. ')}.`;
+  checkedAt = data.updatedAt;
   events = data.events.filter(event => event.date >= budapestToday()).sort((a, b) => `${a.date}T${a.time}`.localeCompare(`${b.date}T${b.time}`));
   render();
 }).catch(() => {
-  updated.textContent = 'Az eseménylista jelenleg nem elérhető.';
-  empty.hidden = false;
-  empty.querySelector('h3').textContent = 'Az eseménylista nem érhető el.';
-  empty.querySelector('p').textContent = 'Próbáld újra később.';
+  loadFailed = true;
+  render();
 });

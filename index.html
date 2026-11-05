@@ -6,50 +6,56 @@
   <meta name="theme-color" content="#141715">
   <meta name="description" content="DnB Radar: budapesti drum & bass bulik, fellépői zenék, ellenőrzött jegyárak és hivatalos jegylinkek.">
   <title>DnB Radar — Budapest drum & bass események</title>
-  <link rel="stylesheet" href="style.css?v=wishlist-1">
-  <script defer src="app.js?v=artist-profiles-1"></script>
-  <script defer src="wishlist.js?v=1"></script>
+  <link rel="stylesheet" href="style.css?v=languages-1">
+  <script defer src="i18n.js?v=1"></script>
+  <script defer src="app.js?v=languages-1"></script>
+  <script defer src="wishlist.js?v=languages-1"></script>
 </head>
 <body>
-  <a class="skip" href="#esemenyek">Ugrás az eseményekhez</a>
+  <a class="skip" href="#esemenyek" data-i18n="skip">Ugrás az eseményekhez</a>
   <div class="page-shell">
     <header class="topbar wrap">
-      <a href="#top" class="brand" aria-label="DnB Radar kezdőlap">DnB Radar</a>
+      <a href="#top" class="brand" aria-label="DnB Radar kezdőlap" data-i18n-aria="brandAria">DnB Radar</a>
+      <nav class="language-switch" aria-label="Nyelv / Language">
+        <button type="button" data-lang="hu" lang="hu" aria-pressed="true">HU</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+      </nav>
     </header>
 
     <main id="top">
       <section class="hero wrap" aria-labelledby="hero-title">
         <div class="hero-copy">
           <div class="eyebrow">BUDAPEST / DRUM & BASS</div>
-          <h1 id="hero-title"><span>Budapesti</span> <span>drum &amp; bass</span> <span>események</span></h1>
-          <p>Közelgő budapesti bulik. Nézd meg, kik játszanak, hallgass bele a zenéjükbe, és nyisd meg a hivatalos jegyoldalt.</p>
+          <h1 id="hero-title"><span data-i18n="heroOne">Budapesti</span> <span>drum &amp; bass</span> <span data-i18n="heroThree">események</span></h1>
+          <p data-i18n="heroIntro">Közelgő budapesti bulik. Nézd meg, kik játszanak, hallgass bele a zenéjükbe, és nyisd meg a hivatalos jegyoldalt.</p>
         </div>
       </section>
 
       <section class="events-section" id="esemenyek" aria-labelledby="events-title">
         <div class="wrap">
-          <div class="section-head"><h2 id="events-title">Közelgő programok</h2><p class="updated" id="updated">Ellenőrzött adatok betöltése…</p></div>
+          <div class="section-head"><h2 id="events-title" data-i18n="upcoming">Közelgő programok</h2><p class="updated" id="updated" data-i18n="eventsLoading">Ellenőrzött adatok betöltése…</p></div>
           <div id="event-list" class="event-list" aria-live="polite"></div>
-          <div id="empty" class="empty" hidden><h3>Nincs közelgő program</h3><p>Jelenleg nincs igazolt közelgő budapesti esemény a listában.</p></div>
+          <div id="empty" class="empty" hidden><h3 data-i18n="noEvents">Nincs közelgő program</h3><p data-i18n="noVerifiedEvents">Jelenleg nincs igazolt közelgő budapesti esemény a listában.</p></div>
         </div>
       </section>
 
       <section class="wishlist-section wrap" id="wishlist" aria-labelledby="wishlist-title">
-        <div class="wishlist-intro"><p class="overline">KÖZÖSSÉGI KÍVÁNSÁGLISTA</p><h2 id="wishlist-title">Kit hoznál<br>Budapestre?</h2><p>Írd be, melyik drum &amp; bass előadót látnád szívesen. Nem kell regisztráció; a kívánságod azonnal nyilvános lesz.</p></div>
+        <div class="wishlist-intro"><p class="overline" data-i18n="wishlistEyebrow">KÖZÖSSÉGI KÍVÁNSÁGLISTA</p><h2 id="wishlist-title"><span data-i18n="wishlistTitleOne">Kit hoznál</span><br><span data-i18n="wishlistTitleTwo">Budapestre?</span></h2><p data-i18n="wishlistIntro">Írd be, melyik drum &amp; bass előadót látnád szívesen. Nem kell regisztráció; a kívánságod azonnal nyilvános lesz.</p></div>
         <div class="wishlist-panel">
           <form id="wishlist-form" autocomplete="off">
-            <label for="wishlist-artist">Előadó neve</label>
-            <div class="wishlist-fields"><input id="wishlist-artist" name="artist" type="text" minlength="2" maxlength="70" required placeholder="Például: egy előadó neve"><button type="submit">Felírom ↗</button></div>
+            <label for="wishlist-artist" data-i18n="artistName">Előadó neve</label>
+            <div class="wishlist-fields"><input id="wishlist-artist" name="artist" type="text" minlength="2" maxlength="70" required placeholder="Például: egy előadó neve" data-i18n-placeholder="artistPlaceholder"><button type="submit" data-i18n="addWish">Felírom ↗</button></div>
             <input class="wishlist-trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <p id="wishlist-status" class="wishlist-status" role="status" aria-live="polite">Csak előadói neveket írj be; a lista minden látogatónak látható.</p>
           </form>
-          <div class="wishlist-results"><h3>Kívánságok</h3><div id="wishlist-list" aria-live="polite"><p class="wishlist-loading">Kívánságok betöltése…</p></div></div>
+          <div class="wishlist-results"><h3 data-i18n="wishes">Kívánságok</h3><div id="wishlist-list" aria-live="polite"><p class="wishlist-loading" data-i18n="wishesLoading">Kívánságok betöltése…</p></div></div>
         </div>
       </section>
 
     </main>
 
-    <footer class="footer"><div class="wrap foot-inner"><div class="brand">DnB Radar</div><p>Budapesti drum & bass eseménynaptár</p><a href="#top">Vissza az elejére ↑</a></div></footer>
+    <footer class="footer"><div class="wrap foot-inner"><div class="brand">DnB Radar</div><p data-i18n="footerDescription">Budapesti drum & bass eseménynaptár</p><a href="#top" data-i18n="backToTop">Vissza az elejére ↑</a></div></footer>
   </div>
 </body>
 </html>

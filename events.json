@@ -14,6 +14,7 @@
       "url": "https://cooltix.hu/event/6abba6e1cb6a92dc45c58a9b",
       "linkLabel": "Hivatalos jegyoldal",
       "description": "SOTA brit drum & bass producer. A Kassa hajón az ECLIPS sorozat vendége; a szervező energikus szettet és saját zenéit, remixeit emeli ki.",
+      "descriptionEn": "SOTA is a British drum & bass producer. He is the guest at ECLIPS aboard Kassa; the organiser highlights an energetic set featuring his own tracks and remixes.",
       "spotifyArtists": [
         {
           "name": "SOTA",
@@ -25,6 +26,7 @@
       "price": {
         "amountHuf": 7000,
         "note": "A Cooltix 2nd Release jegye; szolgáltatási díj hozzáadódhat.",
+        "noteEn": "Cooltix 2nd Release ticket; a service fee may be added.",
         "checkedAt": "2026-11-05",
         "sourceUrl": "https://cooltix.hu/event/6abba6e1cb6a92dc45c58a9b"
       }
@@ -43,6 +45,7 @@
       "url": "https://cooltix.at/event/6aa93b1db851176d719dc023",
       "linkLabel": "Hivatalos jegyoldal",
       "description": "Az Ivy Lab bass music formáció budapesti állomása a búcsúturné része. A szervező szerint D:Enigma is fellép, aki az Ivy Lab 20/20 kiadójához kötődik.",
+      "descriptionEn": "Ivy Lab's Budapest stop is part of their farewell tour. According to the organiser, D:Enigma, who is associated with Ivy Lab's 20/20 label, is also performing.",
       "spotifyArtists": [
         {
           "name": "Ivy Lab",
@@ -54,6 +57,7 @@
       "price": {
         "amountHuf": 7000,
         "note": "A Cooltix Regular Bee jegye; szolgáltatási díj hozzáadódhat.",
+        "noteEn": "Cooltix Regular Bee ticket; a service fee may be added.",
         "checkedAt": "2026-11-05",
         "sourceUrl": "https://cooltix.at/event/6aa93b1db851176d719dc023"
       }
@@ -74,6 +78,7 @@
       "url": "https://direct.oneticket.hu/events/boiler-room-budapest-w-worship",
       "linkLabel": "Hivatalos jegyoldal",
       "description": "A WORSHIP esten Sub Focus, Dimension, Culture Shock és 1991 közös, egymásba játszott szettje szerepel a hivatalos programban.",
+      "descriptionEn": "The official WORSHIP lineup features a shared, interwoven set by Sub Focus, Dimension, Culture Shock and 1991.",
       "spotifyArtists": [
         {
           "name": "Sub Focus",
@@ -103,6 +108,7 @@
       "price": {
         "amountHuf": 17000,
         "note": "Időkorlátos jegy: belépés csak 20:00 előtt. Ezen felül rendszerhasználati díj fizetendő.",
+        "noteEn": "Time-limited ticket: entry before 20:00 only. An additional booking fee applies.",
         "checkedAt": "2026-11-05",
         "sourceUrl": "https://direct.oneticket.hu/events/boiler-room-budapest-w-worship"
       }
@@ -120,6 +126,7 @@
       "url": "https://www.a38.hu/hu/program/bladerunnaz-kanine-uk-reflections-ukeu-tour",
       "linkLabel": "Hivatalos esemény (telt ház)",
       "description": "Kanine dancefloor drum & bass producer. Az A38-on a Reflections turnéval lép fel; a helyszín jelenleg telt házat jelez.",
+      "descriptionEn": "Kanine is a dancefloor drum & bass producer. He brings the Reflections tour to A38; the venue currently lists the event as sold out.",
       "spotifyArtists": [
         {
           "name": "Kanine",
@@ -148,6 +155,7 @@
       "url": "https://www.durerkert.com/event/beat_safari_2026",
       "linkLabel": "Hivatalos esemény / jegyek",
       "description": "Zigi SC cseh DJ és producer, a Darkshire csapatából érkezik. A Beat Safari szerint neurofunkra épülő Hybrid Evolution szettet hoz.",
+      "descriptionEn": "Zigi SC is a Czech DJ and producer from the Darkshire crew. According to Beat Safari, he will play a neurofunk-focused Hybrid Evolution set.",
       "spotifyArtists": [
         {
           "name": "Zigi SC",
@@ -163,6 +171,7 @@
       "price": {
         "amountHuf": 3500,
         "note": "Early Bird jegy; a szervező szerint nincs külön kezelési díj.",
+        "noteEn": "Early Bird ticket; according to the organiser, there is no separate handling fee.",
         "checkedAt": "2026-11-05",
         "sourceUrl": "https://beatsafaridnb.com/tickets?event=zigi-sc-2026-12-04&lang=hu"
       },
@@ -206,9 +215,11 @@
       "url": "https://cooltix.hu/event/6ab037d32b9a0f466bcd8ca9",
       "linkLabel": "Hivatalos jegyoldal",
       "description": "A londoni Rupture sorozat 20 éves jubileuma először jut Budapestre. A fellépők között az alapító Double O, a rezidens Decibella és Blackeye MC szerepel.",
+      "descriptionEn": "London's Rupture series marks its 20th anniversary in Budapest for the first time. The lineup includes founder Double O, resident Decibella and Blackeye MC.",
       "price": {
         "amountHuf": 6000,
         "note": "A Cooltix Pre-Sale jegye; szolgáltatási díj hozzáadódhat.",
+        "noteEn": "Cooltix Pre-Sale ticket; a service fee may be added.",
         "checkedAt": "2026-11-05",
         "sourceUrl": "https://cooltix.hu/event/6ab037d32b9a0f466bcd8ca9"
       }
@@ -230,6 +241,7 @@
       "url": "https://bladerunnaz.hu/en/event/bladerunnaz-pres-metrik-goddard-emily-makis",
       "linkLabel": "Hivatalos esemény / jegyek",
       "description": "A Bladerunnaz három brit vendéget hoz: Metrik dancefloor hangzását, goddard. friss UK drum & bass zenéit és Emily Makis énekes produkcióját.",
+      "descriptionEn": "Bladerunnaz brings three British guests: Metrik's dancefloor sound, goddard.'s fresh UK drum & bass and a vocal performance by Emily Makis.",
       "spotifyArtists": [
         {
           "name": "Metrik",
@@ -265,7 +277,8 @@
       "address": "Petőfi híd budai hídfő, 1117 Budapest",
       "url": "https://www.a38.hu/hu/program/ludmilla-32281",
       "linkLabel": "Hivatalos esemény / jegyek",
-      "description": "Klasszikus breakbeat és drum & bass az A38-on. Ludmilla extended szettel, a Ninjabreakz DJs és Ster a régi zenékre épülő válogatással készül."
+      "description": "Klasszikus breakbeat és drum & bass az A38-on. Ludmilla extended szettel, a Ninjabreakz DJs és Ster a régi zenékre épülő válogatással készül.",
+      "descriptionEn": "Classic breakbeat and drum & bass at A38. Ludmilla plays an extended set, while Ninjabreakz DJs and Ster prepare selections built around older tracks."
     },
     {
       "id": "bladerunnaz-mozey-2027",
@@ -283,6 +296,7 @@
       "url": "https://bladerunnaz.hu/esemeny/bladerunnaz-pres-mozey",
       "linkLabel": "Hivatalos esemény / jegyek",
       "description": "Mozey a Club Mozey show-val tér vissza Budapestre. A Bladerunnaz programjában Shaymi, Winstone és Canax is fellép.",
+      "descriptionEn": "Mozey returns to Budapest with his Club Mozey show. Shaymi, Winstone and Canax are also on the Bladerunnaz lineup.",
       "spotifyArtists": [
         {
           "name": "Mozey",
