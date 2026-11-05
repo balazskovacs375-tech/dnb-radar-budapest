@@ -6,8 +6,9 @@
   <meta name="theme-color" content="#141715">
   <meta name="description" content="DnB Radar: budapesti drum & bass bulik, fellépői zenék, ellenőrzött jegyárak és hivatalos jegylinkek.">
   <title>DnB Radar — Budapest drum & bass események</title>
-  <link rel="stylesheet" href="style.css?v=artist-profiles-1">
+  <link rel="stylesheet" href="style.css?v=wishlist-1">
   <script defer src="app.js?v=artist-profiles-1"></script>
+  <script defer src="wishlist.js?v=1"></script>
 </head>
 <body>
   <a class="skip" href="#esemenyek">Ugrás az eseményekhez</a>
@@ -31,6 +32,19 @@
           <div class="section-head"><h2 id="events-title">Közelgő programok</h2><p class="updated" id="updated">Ellenőrzött adatok betöltése…</p></div>
           <div id="event-list" class="event-list" aria-live="polite"></div>
           <div id="empty" class="empty" hidden><h3>Nincs közelgő program</h3><p>Jelenleg nincs igazolt közelgő budapesti esemény a listában.</p></div>
+        </div>
+      </section>
+
+      <section class="wishlist-section wrap" id="wishlist" aria-labelledby="wishlist-title">
+        <div class="wishlist-intro"><p class="overline">KÖZÖSSÉGI KÍVÁNSÁGLISTA</p><h2 id="wishlist-title">Kit hoznál<br>Budapestre?</h2><p>Írd be, melyik drum &amp; bass előadót látnád szívesen. Nem kell regisztráció; a kívánságod azonnal nyilvános lesz.</p></div>
+        <div class="wishlist-panel">
+          <form id="wishlist-form" autocomplete="off">
+            <label for="wishlist-artist">Előadó neve</label>
+            <div class="wishlist-fields"><input id="wishlist-artist" name="artist" type="text" minlength="2" maxlength="70" required placeholder="Például: egy előadó neve"><button type="submit">Felírom ↗</button></div>
+            <input class="wishlist-trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <p id="wishlist-status" class="wishlist-status" role="status" aria-live="polite">Csak előadói neveket írj be; a lista minden látogatónak látható.</p>
+          </form>
+          <div class="wishlist-results"><h3>Kívánságok</h3><div id="wishlist-list" aria-live="polite"><p class="wishlist-loading">Kívánságok betöltése…</p></div></div>
         </div>
       </section>
 
