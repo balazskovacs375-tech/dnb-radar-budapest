@@ -96,7 +96,10 @@ h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 
 /* Event cards: clear boundaries, visible artist context, and music on demand. */
 .hero-subtitle{margin:0 0 20px!important;color:var(--accent)!important;font-size:17px!important;font-weight:700;line-height:1.35!important;letter-spacing:-.025em}
-.hero-x{color:var(--accent);font-size:.53em;line-height:1.25;letter-spacing:0;text-align:center}
+.hero-line{white-space:nowrap}
+.hero-x{color:var(--accent);font-style:normal}
+.hero-city{text-align:center}
+@media(max-width:760px){h1{font-size:clamp(24px,7.5vw,45px)!important}}
 .hero-copy>p[data-i18n="heroIntro"]{margin-top:0}
 .event-list{display:grid;gap:16px;border-top:0}
 .event-card{min-width:0;padding:26px;border:1px solid #485248;border-radius:3px;background:#171b18}
