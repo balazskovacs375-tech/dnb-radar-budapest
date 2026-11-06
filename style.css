@@ -95,15 +95,21 @@ h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 }
 
 /* Event cards: clear boundaries, visible artist context, and music on demand. */
-#hero-title{text-align:center}
+#hero-title{display:flex;flex-direction:column;align-items:center;gap:clamp(5px,.5vw,10px);text-align:center}
 .hero-x{color:var(--accent);font-size:.53em;line-height:1.25;letter-spacing:0;text-align:center}
 .hero-city{text-align:center}
 .event-list{display:grid;gap:16px;border-top:0}
-.event-card{min-width:0;padding:26px;border:1px solid #485248;border-radius:3px;background:#171b18}
+.event-card{position:relative;min-width:0;padding:26px;border:1px solid #485248;border-radius:3px;background:#171b18}
+.event-card.is-sold-out::before{content:"";position:absolute;top:0;right:0;width:120px;height:6px;background:#d5484d}
+.event-card.is-sold-out .sold-out{color:#f37b7f}
 .event-description{max-width:640px;margin:13px 0 0;color:#c4cdc3;font-size:13px;line-height:1.6}
+.event-details>.event-description{margin:0 0 12px}
 .event-body{min-width:0}
 .event-body>.spotify-section{margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}
 .event-body>.spotify-section .spotify-choices{margin-bottom:7px}
+.spotify-close{min-height:44px;margin:0 0 12px;padding:8px 12px;border:1px solid #697769;border-radius:4px;background:transparent;color:var(--text);font-size:12px}
+.spotify-close:hover{border-color:var(--accent);color:var(--accent)}
+.spotify-close[hidden]{display:none}
 .event-details{margin-top:14px}
 @media(max-width:760px){
   .event-list{gap:12px}

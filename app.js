@@ -56,6 +56,16 @@ function spotifyPlayer(artists) {
   const choices = node('div', 'spotify-choices');
   const player = node('div', 'spotify-player');
   const hint = node('p', 'spotify-hint', i18n.t('spotifyHint'));
+  const close = node('button', 'spotify-close', i18n.t('closeSpotify'));
+  close.type = 'button';
+  close.hidden = true;
+  function closePlayer() {
+    player.replaceChildren();
+    hint.hidden = false;
+    close.hidden = true;
+    for (const choice of choices.children) choice.setAttribute('aria-pressed', 'false');
+  }
+  close.addEventListener('click', closePlayer);
   for (const artist of artists) {
     if (!/^[A-Za-z0-9]{22}$/.test(artist.id)) continue;
     const button = node('button', 'spotify-choice', artist.name);
@@ -63,6 +73,10 @@ function spotifyPlayer(artists) {
     button.setAttribute('aria-label', i18n.language === 'en' ? `Listen to ${artist.name} on Spotify` : `${artist.name} zenéi a Spotifyon`);
     button.setAttribute('aria-pressed', 'false');
     button.addEventListener('click', () => {
+      if (button.getAttribute('aria-pressed') === 'true') {
+        closePlayer();
+        return;
+      }
       const iframe = node('iframe', 'spotify-iframe');
       iframe.src = `https://open.spotify.com/embed/artist/${artist.id}`;
       iframe.title = i18n.language === 'en' ? `${artist.name} – Spotify player` : `${artist.name} – Spotify lejátszó`;
@@ -71,11 +85,12 @@ function spotifyPlayer(artists) {
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
       player.replaceChildren(iframe);
       hint.hidden = true;
+      close.hidden = false;
       for (const choice of choices.children) choice.setAttribute('aria-pressed', String(choice === button));
     });
     choices.append(button);
   }
-  section.append(choices, hint, player);
+  section.append(choices, close, hint, player);
   return section;
 }
 
@@ -126,6 +141,8 @@ function artistSocials(event) {
 
 function card(event) {
   const article = node('article', 'event-card');
+  const soldOut = event.linkLabel.includes('telt ház');
+  if (soldOut) article.classList.add('is-sold-out');
   const date = node('div', 'event-date');
   date.append(
     node('strong', '', event.date.slice(8)),
@@ -144,7 +161,7 @@ function card(event) {
     price.append(node('strong', '', i18n.language === 'en' ? `From HUF ${amount}` : `${amount} Ft-tól`));
     price.append(node('span', '', i18n.language === 'en' ? `Checked: ${shortDate(event.price.checkedAt)}` : `Ellenőrizve: ${shortDate(event.price.checkedAt)}`));
     actions.append(price);
-  } else if (event.linkLabel.includes('telt ház')) {
+  } else if (soldOut) {
     actions.append(node('strong', 'sold-out', i18n.t('soldOut')));
   }
   const label = officialLabel(event);
@@ -154,11 +171,11 @@ function card(event) {
 
   const details = node('details', 'event-details');
   details.append(node('summary', '', i18n.t('details')));
-  if (event.description) body.append(node('p', 'event-description', i18n.language === 'en' ? (event.descriptionEn || event.description) : event.description));
+  if (event.description) details.append(node('p', 'event-description', i18n.language === 'en' ? (event.descriptionEn || event.description) : event.description));
   if (currentPrice(event.price)) {
     details.append(node('p', 'price-note', i18n.language === 'en' ? (event.price.noteEn || event.price.note) : event.price.note));
     if (event.price.sourceUrl !== event.url) details.append(link(i18n.t('priceSource'), event.price.sourceUrl, 'price-source'));
-  } else if (!event.linkLabel.includes('telt ház')) {
+  } else if (!soldOut) {
     details.append(node('p', 'price-note', i18n.t('currentPrice')));
   }
   if (event.spotifyArtists?.length) body.append(spotifyPlayer(event.spotifyArtists));
