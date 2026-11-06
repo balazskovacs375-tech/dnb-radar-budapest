@@ -51,13 +51,11 @@ function spotifyPlayer(artists) {
   section.append(node('p', 'detail-label', i18n.t('spotifyLabel')));
   const choices = node('div', 'spotify-choices');
   const player = node('div', 'spotify-player');
-  const hint = node('p', 'spotify-hint', i18n.t('spotifyHint'));
   const close = node('button', 'spotify-close', i18n.t('closeSpotify'));
   close.type = 'button';
   close.hidden = true;
   function closePlayer() {
     player.replaceChildren();
-    hint.hidden = false;
     close.hidden = true;
     for (const choice of choices.children) choice.setAttribute('aria-pressed', 'false');
   }
@@ -80,13 +78,12 @@ function spotifyPlayer(artists) {
       iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
       player.replaceChildren(iframe);
-      hint.hidden = true;
       close.hidden = false;
       for (const choice of choices.children) choice.setAttribute('aria-pressed', String(choice === button));
     });
     choices.append(button);
   }
-  section.append(choices, close, hint, player);
+  section.append(choices, close, player);
   return section;
 }
 
