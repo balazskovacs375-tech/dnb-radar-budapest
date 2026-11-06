@@ -95,11 +95,10 @@ h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 }
 
 /* Event cards: clear boundaries, visible artist context, and music on demand. */
-.hero-subtitle{margin:0 0 20px!important;color:var(--accent)!important;font-size:17px!important;font-weight:700;line-height:1.35!important;letter-spacing:-.025em}
+.hero-subtitle{margin:0!important;color:var(--accent)!important;font-size:17px!important;font-weight:700;line-height:1.35!important;letter-spacing:-.025em}
 #hero-title{text-align:center}
 .hero-x{color:var(--accent);font-size:.53em;line-height:1.25;letter-spacing:0;text-align:center}
 .hero-city{text-align:center}
-.hero-copy>p[data-i18n="heroIntro"]{margin-top:0}
 .event-list{display:grid;gap:16px;border-top:0}
 .event-card{min-width:0;padding:26px;border:1px solid #485248;border-radius:3px;background:#171b18}
 .event-description{max-width:640px;margin:13px 0 0;color:#c4cdc3;font-size:13px;line-height:1.6}
@@ -108,7 +107,7 @@ h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 .event-body>.spotify-section .spotify-choices{margin-bottom:7px}
 .event-details{margin-top:14px}
 @media(max-width:760px){
-  .hero-subtitle{margin-bottom:16px!important;font-size:15px!important}
+  .hero-subtitle{font-size:15px!important}
   .event-list{gap:12px}
   .event-card{padding:18px 15px}
   .event-description{font-size:12px;line-height:1.55}
