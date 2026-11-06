@@ -47,21 +47,24 @@ function currentPrice(price) {
 }
 
 function spotifyPlayer(artists) {
+  const verifiedArtists = artists.filter(artist => /^[A-Za-z0-9]{22}$/.test(artist.id) && artist.profileUrl === `https://open.spotify.com/artist/${artist.id}`);
   const section = node('div', 'spotify-section');
   section.append(node('p', 'detail-label', i18n.t('spotifyLabel')));
   const choices = node('div', 'spotify-choices');
   const player = node('div', 'spotify-player');
   const close = node('button', 'spotify-close', i18n.t('closeSpotify'));
+  let search;
+  let activeArtist = verifiedArtists[0];
   close.type = 'button';
   close.hidden = true;
   function closePlayer() {
     player.replaceChildren();
     close.hidden = true;
+    if (search) search.hidden = true;
     for (const choice of choices.children) choice.setAttribute('aria-pressed', 'false');
   }
   close.addEventListener('click', closePlayer);
-  for (const artist of artists) {
-    if (!/^[A-Za-z0-9]{22}$/.test(artist.id)) continue;
+  for (const artist of verifiedArtists) {
     const button = node('button', 'spotify-choice', artist.name);
     button.type = 'button';
     button.setAttribute('aria-label', i18n.language === 'en' ? `Listen to ${artist.name} on Spotify` : `${artist.name} zenéi a Spotifyon`);
@@ -79,11 +82,38 @@ function spotifyPlayer(artists) {
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
       player.replaceChildren(iframe);
       close.hidden = false;
+      activeArtist = artist;
+      if (search) search.hidden = false;
       for (const choice of choices.children) choice.setAttribute('aria-pressed', String(choice === button));
     });
     choices.append(button);
   }
   section.append(choices, close, player);
+  if (verifiedArtists.length) {
+    search = node('form', 'track-search');
+    search.hidden = true;
+    search.target = '_blank';
+    search.rel = 'noopener noreferrer';
+    search.method = 'get';
+    const label = node('p', 'detail-label', i18n.t('trackSearchLabel'));
+    const fields = node('div', 'track-search-fields');
+    const query = node('input', 'track-search-input');
+    query.type = 'search';
+    query.maxLength = 100;
+    query.placeholder = i18n.t('trackSearchPlaceholder');
+    query.setAttribute('aria-label', i18n.t('trackSearchPlaceholder'));
+    const submit = node('button', 'track-search-button', i18n.t('trackSearchAction'));
+    submit.type = 'submit';
+    fields.append(query, submit);
+    search.append(label, fields);
+    search.addEventListener('submit', () => {
+      const title = query.value.trim();
+      search.action = title
+        ? `https://open.spotify.com/search/${encodeURIComponent(`${activeArtist.name} ${title}`)}`
+        : activeArtist.profileUrl;
+    });
+    section.append(search);
+  }
   return section;
 }
 

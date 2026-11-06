@@ -2,6 +2,7 @@ const wishlistApi = 'https://script.google.com/macros/s/AKfycbyVxkv622icNWPv6QfG
 const wishlistForm = document.getElementById('wishlist-form');
 const wishlistInput = document.getElementById('wishlist-artist');
 const wishlistList = document.getElementById('wishlist-list');
+const wishlistResults = document.querySelector('.wishlist-results');
 const wishlistStatus = document.getElementById('wishlist-status');
 const wishlistI18n = window.dnbI18n;
 let knownWishes = [];
@@ -43,10 +44,8 @@ function showWishes(items) {
   wishesLoaded = true;
   wishesFailed = false;
   if (!items.length) {
-    const empty = document.createElement('p');
-    empty.className = 'wishlist-loading';
-    empty.textContent = wishlistI18n.t('wishlistNoWishes');
-    wishlistList.replaceChildren(empty);
+    wishlistList.replaceChildren();
+    wishlistResults.hidden = true;
     return;
   }
   const ul = document.createElement('ul');
@@ -66,18 +65,18 @@ function showWishes(items) {
     ul.append(li);
   }
   wishlistList.replaceChildren(ul);
+  wishlistResults.hidden = false;
 }
 
 async function refreshWishes() {
   try { showWishes(await fetchWishes()); }
-  catch (_) { wishesFailed = true; wishlistList.textContent = wishlistI18n.t('wishlistUnavailable'); }
+  catch (_) { wishesFailed = true; wishlistList.textContent = wishlistI18n.t('wishlistUnavailable'); wishlistResults.hidden = false; }
 }
 
 document.addEventListener('dnb-language-change', () => {
   wishlistStatus.textContent = wishlistI18n.t(statusKey);
   if (wishesLoaded) showWishes(knownWishes);
-  else if (wishesFailed) wishlistList.textContent = wishlistI18n.t('wishlistUnavailable');
-  else wishlistList.textContent = wishlistI18n.t('wishesLoading');
+  else if (wishesFailed) { wishlistList.textContent = wishlistI18n.t('wishlistUnavailable'); wishlistResults.hidden = false; }
 });
 
 wishlistForm.addEventListener('submit', async event => {

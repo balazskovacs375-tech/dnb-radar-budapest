@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#090909">
   <meta name="description" content="DnB Radar: budapesti drum & bass bulik, fellépői zenék, ellenőrzött jegyárak és hivatalos jegylinkek.">
   <title>Drum And Bass X Budapest — DnB Radar</title>
-  <link rel="stylesheet" href="style.css?v=red-theme-2026-11-06">
-  <script defer src="i18n.js?v=no-spotify-hint-2026-11-06"></script>
-  <script defer src="app.js?v=no-spotify-hint-2026-11-06"></script>
-  <script defer src="wishlist.js?v=languages-2"></script>
+  <link rel="stylesheet" href="style.css?v=playlists-2026-11-06">
+  <script defer src="i18n.js?v=playlists-2026-11-06"></script>
+  <script defer src="app.js?v=playlists-2026-11-06"></script>
+  <script defer src="wishlist.js?v=playlists-2026-11-06"></script>
 </head>
 <body>
   <a class="skip" href="#esemenyek" data-i18n="skip">Ugrás az eseményekhez</a>
@@ -38,6 +38,15 @@
         </div>
       </section>
 
+      <section class="playlist-section wrap" aria-labelledby="playlists-title">
+        <div class="playlist-heading"><h2 id="playlists-title" data-i18n="featuredPlaylists">Featured Playlists</h2><a href="https://open.spotify.com/user/x5oosxi396aw4hd92xgacnkl6" target="_blank" rel="noopener noreferrer" data-i18n="spotifyProfile">Spotify-profil ↗</a></div>
+        <div class="playlist-grid">
+          <a class="playlist-card" href="https://open.spotify.com/playlist/4j0TCsKFs6BetnrlQR543z" target="_blank" rel="noopener noreferrer"><span class="playlist-number">01 / SPOTIFY</span><strong>Ainonow Selects</strong><span class="playlist-open" data-i18n="openPlaylist">Lejátszási lista megnyitása ↗</span></a>
+          <a class="playlist-card" href="https://open.spotify.com/playlist/4NXAdLAywJ7MkKTV3jSWjZ" target="_blank" rel="noopener noreferrer"><span class="playlist-number">02 / SPOTIFY</span><strong>Thunder Bass DnB : Liquid, Neuro &amp; High-Energy Rollers</strong><span class="playlist-open" data-i18n="openPlaylist">Lejátszási lista megnyitása ↗</span></a>
+          <a class="playlist-card" href="https://open.spotify.com/playlist/4XghcP2db5SOqKg9Cd0RF7" target="_blank" rel="noopener noreferrer"><span class="playlist-number">03 / SPOTIFY</span><strong>Deep Dark DnB</strong><span class="playlist-open" data-i18n="openPlaylist">Lejátszási lista megnyitása ↗</span></a>
+        </div>
+      </section>
+
       <section class="wishlist-section wrap" id="wishlist" aria-labelledby="wishlist-title">
         <div class="wishlist-intro"><h2 id="wishlist-title"><span data-i18n="wishlistTitleOne">Kit hoznál</span><br><span data-i18n="wishlistTitleTwo">Budapestre?</span></h2><p data-i18n="wishlistIntro">Írd be, melyik drum &amp; bass előadót látnád szívesen. Nem kell regisztráció; a kívánságod azonnal nyilvános lesz.</p></div>
         <div class="wishlist-panel">
@@ -47,8 +56,13 @@
             <input class="wishlist-trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <p id="wishlist-status" class="wishlist-status" role="status" aria-live="polite">Csak előadói neveket írj be; a lista minden látogatónak látható.</p>
           </form>
-          <div class="wishlist-results"><h3 data-i18n="wishes">Kívánságok</h3><div id="wishlist-list" aria-live="polite"><p class="wishlist-loading" data-i18n="wishesLoading">Kívánságok betöltése…</p></div></div>
+          <div class="wishlist-results" hidden><div id="wishlist-list" aria-live="polite"></div></div>
         </div>
+      </section>
+
+      <section class="partner-section wrap" aria-labelledby="partner-title">
+        <span class="partner-label" data-i18n="partnerLabel">PARTNEREK</span>
+        <h2 id="partner-title" data-i18n="partnerInvitation">Partneri megállapodásra keresünk további partnereket.</h2>
       </section>
 
     </main>
