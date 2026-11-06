@@ -3,12 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#080808">
   <meta name="description" content="DnB Radar: budapesti drum & bass bulik, fellépői zenék, ellenőrzött jegyárak és hivatalos jegylinkek.">
   <title>Drum And Bass X Budapest — DnB Radar</title>
-  <link rel="stylesheet" href="style.css?v=editorial-2026-11-06">
+  <link rel="stylesheet" href="assets/leaflet/leaflet.css">
+  <link rel="stylesheet" href="style.css?v=map-share-2026-11-06">
   <script defer src="i18n.js?v=editorial-2026-11-06"></script>
-  <script defer src="app.js?v=playlists-2026-11-06"></script>
+  <script defer src="event-tools.js?v=map-share-2026-11-06"></script>
+  <script defer src="assets/leaflet/leaflet.js"></script>
+  <script defer src="map.js?v=map-share-2026-11-06"></script>
+  <script defer src="app.js?v=map-share-2026-11-06"></script>
 </head>
 <body>
   <a class="skip" href="#esemenyek" data-i18n="skip">Ugrás az eseményekhez</a>
@@ -37,6 +41,12 @@
         </div>
       </section>
 
+      <section class="map-section wrap" id="terkep" aria-labelledby="map-title">
+        <div class="map-heading"><span class="map-overline" data-i18n="mapOverline">BUDAPEST / HELYSZÍNEK</span><h2 id="map-title" data-i18n="mapTitle">Bulik a térképen</h2></div>
+        <div id="event-map" aria-label="Budapesti bulihelyszínek térképe" data-i18n-aria="mapAria"></div>
+        <p id="map-fallback" class="map-fallback" hidden></p>
+      </section>
+
       <section class="playlist-section wrap" aria-labelledby="playlists-title">
         <div class="playlist-heading"><h2 id="playlists-title" data-i18n="featuredPlaylists">Featured Playlists</h2><a href="https://open.spotify.com/user/x5oosxi396aw4hd92xgacnkl6" target="_blank" rel="noopener noreferrer" data-i18n="spotifyProfile">Spotify-profil ↗</a></div>
         <div class="playlist-grid">
@@ -52,6 +62,7 @@
       <section class="partner-section wrap" aria-labelledby="partner-title">
         <span class="partner-label" data-i18n="partnerLabel">PARTNEREK</span>
         <h2 id="partner-title" data-i18n="partnerInvitation">Partneri együttműködéseket keresünk budapesti drum &amp; bass szervezőkkel, helyszínekkel és közösségekkel.</h2>
+
       </section>
 
     </main>

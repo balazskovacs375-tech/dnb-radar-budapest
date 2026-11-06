@@ -2,6 +2,7 @@ const list = document.getElementById('event-list');
 const empty = document.getElementById('empty');
 const updated = document.getElementById('updated');
 const i18n = window.dnbI18n;
+const eventTools = window.dnbEventTools;
 let events = [];
 let checkedAt = '';
 let loadFailed = false;
@@ -164,6 +165,7 @@ function artistSocials(event) {
 
 function card(event) {
   const article = node('article', 'event-card');
+  article.id = `event-${event.id}`;
   const soldOut = event.linkLabel.includes('telt ház');
   if (soldOut) article.classList.add('is-sold-out');
   const date = node('div', 'event-date');
@@ -190,6 +192,28 @@ function card(event) {
   const official = link(`${label} ↗`, event.url, 'event-link');
   official.setAttribute('aria-label', i18n.language === 'en' ? `${event.title} – ${label}, opens in a new tab` : `${event.title} – ${label}, új lapon nyílik`);
   actions.append(official);
+  const secondaryActions = node('div', 'event-secondary-actions');
+  const mapLink = node('a', '', i18n.t('showOnMap'));
+  mapLink.href = '#terkep';
+  mapLink.addEventListener('click', () => {
+    window.setTimeout(() => window.dnbMap?.focusVenue(event.venue), 450);
+  });
+  const share = node('button', '', i18n.t('shareEvent'));
+  share.type = 'button';
+  share.setAttribute('aria-label', `${i18n.t('shareEvent')}: ${event.title}`);
+  const shareStatus = node('span', 'share-status');
+  shareStatus.setAttribute('role', 'status');
+  share.addEventListener('click', async () => {
+    const url = eventTools.permalink(event.id, location.href);
+    try {
+      await navigator.clipboard.writeText(url);
+      shareStatus.textContent = i18n.t('linkCopied');
+    } catch (_) {
+      shareStatus.textContent = url;
+    }
+  });
+  secondaryActions.append(mapLink, share, shareStatus);
+  actions.append(secondaryActions);
 
   const details = node('details', 'event-details');
   details.append(node('summary', '', i18n.t('details')));
@@ -219,9 +243,16 @@ function render() {
   if (checkedAt) updated.textContent = i18n.language === 'en' ? `Last checked: ${shortDate(checkedAt)}` : `Utolsó ellenőrzés: ${shortDate(checkedAt)}`;
   list.replaceChildren(...events.map(card));
   empty.hidden = events.length > 0;
+  window.dnbMap?.render(events, i18n.language);
+  const target = location.hash.startsWith('#event-') ? document.getElementById(location.hash.slice(1)) : null;
+  if (target) requestAnimationFrame(() => target.scrollIntoView({ block: 'center' }));
 }
 
 document.addEventListener('dnb-language-change', render);
+window.addEventListener('hashchange', () => {
+  if (!location.hash.startsWith('#event-')) return;
+  document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+});
 
 fetch('events.json', { cache: 'no-store' }).then(response => {
   if (!response.ok) throw new Error('Az adatfájl nem tölthető be.');
