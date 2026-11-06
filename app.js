@@ -10,10 +10,6 @@ function budapestToday() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Budapest', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 }
 
-function formatDate(date) {
-  return new Intl.DateTimeFormat(i18n.language === 'en' ? 'en-GB' : 'hu-HU', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'short', timeZone: 'Europe/Budapest' }).format(new Date(`${date}T12:00:00+02:00`));
-}
-
 function shortDate(date) {
   return i18n.language === 'en'
     ? new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'Europe/Budapest' }).format(new Date(`${date}T12:00:00+02:00`))
@@ -149,7 +145,6 @@ function card(event) {
     node('span', '', new Intl.DateTimeFormat(i18n.language === 'en' ? 'en-GB' : 'hu-HU', { month: 'short', timeZone: 'Europe/Budapest' }).format(new Date(`${event.date}T12:00:00+02:00`)).replace('.', '').toUpperCase())
   );
   const body = node('div', 'event-body');
-  body.append(node('p', 'date-long', `${formatDate(event.date)} · ${event.time}`));
   body.append(node('h3', '', event.title));
   body.append(artistLine(event));
   body.append(node('p', 'venue', `${event.venue} · ${event.address}`));
