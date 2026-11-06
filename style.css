@@ -1,8 +1,8 @@
-:root{color-scheme:dark;--bg:#141715;--panel:#1b1f1c;--line:#3b443d;--text:#f4f5ef;--muted:#a8b0a8;--accent:#b5ef38}
+:root{color-scheme:dark;--bg:#090909;--panel:#111111;--line:#383838;--text:#f5f5f5;--muted:#b8b8b8;--accent:#ed4b55}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}button,a{font:inherit}a{color:inherit}button{cursor:pointer}.wrap{width:min(1100px,calc(100% - 64px));margin-inline:auto}.skip{position:absolute;top:-100px;left:16px;z-index:10;padding:10px;background:var(--accent);color:#111}.skip:focus{top:8px}:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .topbar{display:flex;align-items:center;justify-content:space-between;height:76px;border-bottom:1px solid var(--line)}.brand{font-size:21px;font-weight:800;letter-spacing:-.055em;text-decoration:none}.toplink{color:var(--muted);font-size:13px;text-decoration:none}.toplink:hover,.footer a:hover{color:var(--text);text-decoration:underline}
 .hero{padding-top:54px;padding-bottom:58px}.hero-copy{max-width:920px}.eyebrow,.overline{color:var(--accent);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{max-width:950px;margin:19px 0 20px;font-size:clamp(50px,6.3vw,76px);line-height:1.03;letter-spacing:-.07em;font-weight:750}.hero-copy>p{max-width:630px;color:var(--muted);font-size:17px;line-height:1.6;margin-bottom:0}
-.events-section{padding:75px 0 88px;border-top:1px solid var(--line);background:var(--panel)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.overline{margin-bottom:12px}h2{font-size:clamp(34px,4.4vw,53px);line-height:1.1;letter-spacing:-.06em;font-weight:720;margin-bottom:0}.updated{color:var(--muted);font-size:13px;margin:0 0 4px;white-space:nowrap}.event-list{border-top:1px solid var(--line)}.event-card{display:grid;grid-template-columns:65px minmax(0,1fr) auto;gap:22px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line)}.event-date{display:flex;flex-direction:column;justify-content:center;align-items:start}.event-date strong{font-size:36px;line-height:1;font-weight:700;letter-spacing:-.06em}.event-date span{margin-top:5px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.1em}.card-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px}.date-long{color:var(--muted);font-size:12px}.event-body h3{margin:0 0 7px;font-size:21px;font-weight:700;letter-spacing:-.04em;line-height:1.25}.artists{margin-bottom:5px;color:#d5d9d3;font-size:13px;line-height:1.5}.venue{margin-bottom:0;color:var(--muted);font-size:12px;line-height:1.5}.event-link{padding:10px 0 10px 16px;color:var(--accent);font-size:12px;font-weight:650;text-decoration:none;white-space:nowrap}.event-link:hover{text-decoration:underline}.empty{padding:45px 0;border-top:1px solid var(--line)}.empty h3{margin-bottom:8px;font-size:20px}.empty p{max-width:530px;color:var(--muted);line-height:1.6}
+.events-section{padding:75px 0 88px;border-top:1px solid var(--line);background:var(--panel)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.overline{margin-bottom:12px}h2{font-size:clamp(34px,4.4vw,53px);line-height:1.1;letter-spacing:-.06em;font-weight:720;margin-bottom:0}.updated{color:var(--muted);font-size:13px;margin:0 0 4px;white-space:nowrap}.event-list{border-top:1px solid var(--line)}.event-card{display:grid;grid-template-columns:65px minmax(0,1fr) auto;gap:22px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line)}.event-date{display:flex;flex-direction:column;justify-content:center;align-items:start}.event-date strong{font-size:36px;line-height:1;font-weight:700;letter-spacing:-.06em}.event-date span{margin-top:5px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.1em}.card-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px}.date-long{color:var(--muted);font-size:12px}.event-body h3{margin:0 0 7px;font-size:21px;font-weight:700;letter-spacing:-.04em;line-height:1.25}.artists{margin-bottom:5px;color:#d7d7d7;font-size:13px;line-height:1.5}.venue{margin-bottom:0;color:var(--muted);font-size:12px;line-height:1.5}.event-link{padding:10px 0 10px 16px;color:var(--accent);font-size:12px;font-weight:650;text-decoration:none;white-space:nowrap}.event-link:hover{text-decoration:underline}.empty{padding:45px 0;border-top:1px solid var(--line)}.empty h3{margin-bottom:8px;font-size:20px}.empty p{max-width:530px;color:var(--muted);line-height:1.6}
 .info-section{display:grid;grid-template-columns:1fr 1fr;gap:65px;padding-top:82px;padding-bottom:90px}.info-copy{padding-top:5px}.info-copy p{color:var(--muted);font-size:14px;line-height:1.75;margin-bottom:16px}.footer{border-top:1px solid var(--line)}.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:75px}.footer .brand{font-size:17px}.footer p,.footer a{color:var(--muted);font-size:12px;text-decoration:none;margin:0}
 @media(max-width:760px){.wrap{width:min(100% - 34px,1100px)}.topbar{height:66px}.brand{font-size:19px}.hero{padding-top:48px;padding-bottom:55px}h1{font-size:clamp(42px,10vw,64px)}.hero-copy>p{font-size:16px}.events-section{padding-top:59px;padding-bottom:68px}.section-head{display:block;margin-bottom:30px}.updated{margin-top:16px}.event-card{grid-template-columns:50px minmax(0,1fr);gap:12px;padding:20px 0}.event-date strong{font-size:30px}.event-body h3{font-size:18px}.event-link{grid-column:2;padding:1px 0 0}.info-section{display:block;padding-top:68px;padding-bottom:66px}.info-copy{padding-top:24px}.foot-inner{flex-wrap:wrap;padding:22px 0}.footer p{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -15,13 +15,13 @@
 .venue{font-size:13px}
 .event-actions{display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px;text-align:right}
 .price{display:flex;flex-direction:column;gap:4px}.price strong{font-size:19px;letter-spacing:-.035em}.price span{color:var(--muted);font-size:11px}
-.sold-out{font-size:14px;color:#ebbd9b}
+.sold-out{font-size:14px;color:#f37b7f}
 .event-link{padding:2px 0;color:var(--accent);white-space:normal;line-height:1.4}
 .event-details{margin-top:15px}.event-details summary{display:list-item;cursor:pointer;color:var(--accent);font-size:13px;font-weight:600;list-style-position:inside}
-.event-details[open] summary{margin-bottom:12px}.description,.price-note,.spotify-hint{font-size:13px;line-height:1.6;color:#c5ccc5;max-width:670px;margin:0 0 9px}
+.event-details[open] summary{margin-bottom:12px}.description,.price-note,.spotify-hint{font-size:13px;line-height:1.6;color:#c8c8c8;max-width:670px;margin:0 0 9px}
 .price-note,.spotify-hint{color:var(--muted);font-size:12px}.price-source{display:inline-block;color:var(--accent);font-size:12px;margin-bottom:10px;text-decoration:none}
 .spotify-section{margin-top:18px}.detail-label{margin:0 0 9px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.spotify-choices{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:9px}.spotify-choice{border:1px solid #4c554c;border-radius:4px;background:transparent;color:var(--text);padding:7px 10px;font-size:12px}
+.spotify-choices{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:9px}.spotify-choice{border:1px solid #565656;border-radius:4px;background:transparent;color:var(--text);padding:7px 10px;font-size:12px}
 .spotify-choice:hover,.spotify-choice[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}.spotify-player{max-width:650px}.spotify-iframe{display:block;width:100%;height:352px;border:0;border-radius:8px}
 @media(max-width:760px){.event-card{grid-template-columns:44px minmax(0,1fr);gap:12px;padding:23px 0}.event-actions{grid-column:2;align-items:flex-start;text-align:left;gap:8px;padding:0}.event-body h3{font-size:19px}.event-details{margin-top:13px}.spotify-iframe{height:352px}.price strong{font-size:18px}}
 
@@ -34,22 +34,22 @@
 h1,h2{font-family:"Archivo Black",Arial,sans-serif;font-weight:400}
 h1{max-width:none;margin:24px 0 26px;font-size:clamp(38px,8.2vw,104px);line-height:.93;letter-spacing:-.075em;text-transform:uppercase}
 h1 span{display:block}
-.hero-copy>p{max-width:520px;color:#c1c8c0;font-size:16px;line-height:1.65}
+.hero-copy>p{max-width:520px;color:#c7c7c7;font-size:16px;line-height:1.65}
 h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 .events-section{padding-top:68px;background:var(--panel)}
 .event-card{padding-top:30px;padding-bottom:30px}
 .event-date strong{font-family:"Archivo Black",Arial,sans-serif;font-weight:400;letter-spacing:-.07em}
 .event-body h3{font-weight:750;letter-spacing:-.045em}
 .event-details summary,.event-link,.price-source{color:var(--accent)}
-.spotify-choice{border-color:#536052}.spotify-choice:hover,.spotify-choice[aria-pressed="true"]{border-color:var(--accent)}
+.spotify-choice{border-color:#626262}.spotify-choice:hover,.spotify-choice[aria-pressed="true"]{border-color:var(--accent)}
 @media(max-width:760px){.topbar{height:68px}.brand{font-size:17px}.hero{padding-top:54px;padding-bottom:63px}.eyebrow{font-size:10px}h1{font-size:clamp(37px,10.9vw,67px);margin:20px 0 24px;line-height:.94;letter-spacing:-.072em}.hero-copy>p{font-size:15px;line-height:1.6}.events-section{padding-top:58px}.event-card{padding-top:24px;padding-bottom:24px}}
 
 .artist-list{display:flex;align-items:center;flex-wrap:wrap;gap:7px 12px;margin:4px 0 10px}
-.artist-with-photo{display:inline-flex;align-items:center;gap:7px;min-height:32px;color:#dfe8d9;font-size:13px;font-weight:650;text-decoration:none}
+.artist-with-photo{display:inline-flex;align-items:center;gap:7px;min-height:32px;color:#e7e7e7;font-size:13px;font-weight:650;text-decoration:none}
 .artist-with-photo:hover span{text-decoration:underline;text-decoration-color:var(--accent)}
-.artist-photo{display:block;width:32px;height:32px;object-fit:cover;border-radius:50%;background:#343e34;border:1px solid #526052}
-.artist-name{color:#b9c2b8;font-size:13px;line-height:1.4}
-.artist-name+.artist-name::before{content:'·';padding-right:11px;color:#7e8c7c}
+.artist-photo{display:block;width:32px;height:32px;object-fit:cover;border-radius:50%;background:#303030;border:1px solid #5a5a5a}
+.artist-name{color:#c3c3c3;font-size:13px;line-height:1.4}
+.artist-name+.artist-name::before{content:'·';padding-right:11px;color:#8c8c8c}
 .artist-socials{margin-top:19px}.artist-social-links{display:flex;flex-wrap:wrap;gap:7px 13px}
 .artist-social-links a{font-size:12px;color:var(--accent);text-decoration:none}.artist-social-links a:hover{text-decoration:underline}
 @media(max-width:760px){.artist-list{gap:8px 11px}.artist-with-photo,.artist-name{font-size:12px}}
@@ -57,8 +57,8 @@ h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 .wishlist-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.18fr);gap:70px;padding-top:90px;padding-bottom:95px;border-top:1px solid var(--line)}
 .wishlist-intro h2{margin:14px 0 20px}.wishlist-intro>p:last-child{max-width:380px;color:var(--muted);font-size:14px;line-height:1.75}
 .wishlist-panel{border-top:2px solid var(--accent);padding-top:25px}.wishlist-panel label{display:block;margin-bottom:10px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-.wishlist-fields{display:flex;gap:8px}.wishlist-fields input{min-width:0;flex:1;padding:13px 14px;border:1px solid #596358;border-radius:3px;background:#202621;color:var(--text);font-size:14px;outline:none}.wishlist-fields input:focus{border-color:var(--accent)}
-.wishlist-fields button{flex:none;border:1px solid var(--accent);border-radius:3px;background:var(--accent);color:#111811;padding:13px 18px;font-size:13px;font-weight:800}.wishlist-fields button:hover{background:#d0ff61}.wishlist-fields button:disabled{opacity:.5;cursor:wait}
+.wishlist-fields{display:flex;gap:8px}.wishlist-fields input{min-width:0;flex:1;padding:13px 14px;border:1px solid #595959;border-radius:3px;background:#1b1b1b;color:var(--text);font-size:14px;outline:none}.wishlist-fields input:focus{border-color:var(--accent)}
+.wishlist-fields button{flex:none;border:1px solid var(--accent);border-radius:3px;background:var(--accent);color:#090909;padding:13px 18px;font-size:13px;font-weight:800}.wishlist-fields button:hover{background:#ff6870}.wishlist-fields button:disabled{opacity:.5;cursor:wait}
 .wishlist-trap{position:absolute;left:-10000px;width:1px;height:1px;opacity:0}.wishlist-status,.wishlist-loading{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.5}
 .wishlist-results{margin-top:30px}.wishlist-results h3{margin-bottom:10px;font-size:16px;letter-spacing:-.02em}.wishlist-items{list-style:none;margin:0;padding:0;max-height:430px;overflow:auto;border-top:1px solid var(--line)}
 .wishlist-items li{display:flex;justify-content:space-between;align-items:baseline;gap:15px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.wishlist-items time{flex:none;color:var(--muted);font-size:11px}
@@ -67,7 +67,7 @@ h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 .language-switch{display:flex;align-items:center;gap:8px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
 .language-switch button{padding:8px 4px;border:0;background:transparent;color:var(--muted)}
 .language-switch button[aria-pressed="true"],.language-switch button:hover{color:var(--accent)}
-.language-switch span{color:#687468}
+.language-switch span{color:#777777}
 @media(max-width:760px){html[lang="hu"] h1{font-size:clamp(27px,8.3vw,48px)}}
 
 /* Larger tap targets and a shorter route from the heading to the programme. */
@@ -78,7 +78,7 @@ h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 .event-details summary::before{content:'+';flex:none;width:16px;color:var(--accent);font-size:20px;font-weight:400;line-height:1}
 .event-details[open] summary::before{content:'−'}
 .event-link{display:flex;align-items:center;justify-content:center;min-height:44px;width:100%;padding:10px 13px;border:1px solid var(--accent);border-radius:2px;text-align:center;text-decoration:none}
-.event-link:hover{background:var(--accent);color:#141715;text-decoration:none}
+.event-link:hover{background:var(--accent);color:#090909;text-decoration:none}
 .spotify-choice{min-height:44px}
 .wishlist-fields input{min-height:48px}
 @media(max-width:760px){
@@ -99,15 +99,15 @@ h2{font-size:clamp(31px,3.8vw,47px);line-height:1.06;letter-spacing:-.065em}
 .hero-x{color:var(--accent);font-size:.53em;line-height:1.25;letter-spacing:0;text-align:center}
 .hero-city{text-align:center}
 .event-list{display:grid;gap:16px;border-top:0}
-.event-card{position:relative;min-width:0;padding:26px;border:1px solid #485248;border-radius:3px;background:#171b18}
-.event-card.is-sold-out::before{content:"";position:absolute;top:0;right:0;width:120px;height:6px;background:#d5484d}
+.event-card{position:relative;min-width:0;padding:26px;border:1px solid #414141;border-radius:3px;background:#151515}
+.event-card.is-sold-out::before{content:"";position:absolute;top:0;right:0;width:120px;height:6px;background:#ed4b55}
 .event-card.is-sold-out .sold-out{color:#f37b7f}
-.event-description{max-width:640px;margin:13px 0 0;color:#c4cdc3;font-size:13px;line-height:1.6}
+.event-description{max-width:640px;margin:13px 0 0;color:#c9c9c9;font-size:13px;line-height:1.6}
 .event-details>.event-description{margin:0 0 12px}
 .event-body{min-width:0}
 .event-body>.spotify-section{margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}
 .event-body>.spotify-section .spotify-choices{margin-bottom:7px}
-.spotify-close{min-height:44px;margin:0 0 12px;padding:8px 12px;border:1px solid #697769;border-radius:4px;background:transparent;color:var(--text);font-size:12px}
+.spotify-close{min-height:44px;margin:0 0 12px;padding:8px 12px;border:1px solid #666666;border-radius:4px;background:transparent;color:var(--text);font-size:12px}
 .spotify-close:hover{border-color:var(--accent);color:var(--accent)}
 .spotify-close[hidden]{display:none}
 .event-details{margin-top:14px}
