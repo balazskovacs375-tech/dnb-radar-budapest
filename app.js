@@ -11,6 +11,8 @@ function budapestToday() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Budapest', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 }
 
+document.querySelector('#event-submit-form input[name="date"]').min = budapestToday();
+
 function shortDate(date) {
   return i18n.language === 'en'
     ? new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'Europe/Budapest' }).format(new Date(`${date}T12:00:00+02:00`))

@@ -78,6 +78,8 @@ function translate(key) { return messages[language][key] || messages.hu[key] || 
 
 function renderLanguage() {
   document.documentElement.lang = language;
+  const submissionLanguage = document.querySelector('#event-submit-form input[name="language"]');
+  if (submissionLanguage) submissionLanguage.value = language;
   document.title = translate('pageTitle');
   document.querySelector('meta[name="description"]').content = translate('metaDescription');
   for (const element of document.querySelectorAll('[data-i18n]')) element.textContent = translate(element.dataset.i18n);

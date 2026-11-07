@@ -62,7 +62,22 @@
       <section class="partner-section wrap" aria-labelledby="partner-title">
         <span class="partner-label" data-i18n="partnerLabel">PARTNEREK</span>
         <h2 id="partner-title" data-i18n="partnerInvitation">Partneri együttműködéseket keresünk budapesti drum &amp; bass szervezőkkel, helyszínekkel és közösségekkel.</h2>
-
+        <details class="submission-details">
+          <summary data-i18n="submitEvent">Esemény beküldése</summary>
+          <p data-i18n="submissionIntro">Szervezőként küldd el a hivatalos eseménylinket. A javaslat csak ellenőrzés után kerülhet fel az oldalra.</p>
+          <form id="event-submit-form" action="https://script.google.com/macros/s/AKfycbzfVXe9yU9pRlJ6PkneOdZorvXI_AhoCP20nb8rtr1EZ6cECFSYAMJmzqBWR-_EYsnJ/exec" method="post" target="_blank" rel="noopener">
+            <input name="language" type="hidden" value="hu">
+            <div class="submission-grid">
+              <label><span data-i18n="submissionTitle">Esemény neve</span><input name="title" type="text" minlength="3" maxlength="100" required autocomplete="off"></label>
+              <label><span data-i18n="submissionDate">Dátum</span><input name="date" type="date" required></label>
+              <label><span data-i18n="submissionVenue">Budapesti helyszín</span><input name="venue" type="text" minlength="3" maxlength="120" required autocomplete="off"></label>
+              <label><span data-i18n="submissionUrl">Hivatalos esemény- vagy jegylink</span><input name="url" type="url" pattern="https://.*" maxlength="500" placeholder="https://" required></label>
+            </div>
+            <label class="submission-note"><span data-i18n="submissionNote">Megjegyzés (opcionális)</span><textarea name="note" maxlength="500" rows="3"></textarea></label>
+            <label class="submission-trap" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+            <div class="submission-footer"><button type="submit" data-i18n="submissionSend">Elküldöm ellenőrzésre ↗</button><span data-i18n="submissionPrivate">A javaslat nem nyilvános. Személyes adatot ne írj be.</span></div>
+          </form>
+        </details>
       </section>
 
     </main>
