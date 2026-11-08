@@ -231,6 +231,19 @@ h2{font-family:Manrope,Arial,sans-serif;font-size:clamp(26px,3.3vw,42px);font-we
 }
 @media(prefers-reduced-motion:reduce){.event-card{transition:none}}
 
+.event-heading{display:flex;align-items:center;gap:15px;min-width:0;margin-bottom:9px}
+.event-heading h3{margin:0;min-width:0}
+.series-logo{display:block;flex:none;box-sizing:border-box;height:54px;object-fit:contain;border:1px solid #45413f;background:#0b0b0b}
+.series-logo--wide{width:98px;padding:6px}
+.series-logo--square{width:54px;padding:5px}
+@media(max-width:760px){
+  .event-heading{align-items:flex-start;gap:10px;margin-bottom:8px}
+  .event-heading h3{padding-top:2px}
+  .series-logo{height:43px}
+  .series-logo--wide{width:77px;padding:4px}
+  .series-logo--square{width:43px;padding:4px}
+}
+
 .submission-details{max-width:840px;margin-top:30px;padding:0 24px 23px;border:1px solid #5a5752;background:#141414}
 .submission-details summary{display:flex;align-items:center;justify-content:space-between;min-height:64px;cursor:pointer;list-style:none;color:#fff;font-size:14px;font-weight:800;letter-spacing:.035em}
 .submission-details summary::-webkit-details-marker{display:none}

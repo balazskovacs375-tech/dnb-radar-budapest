@@ -7,6 +7,18 @@ let events = [];
 let checkedAt = '';
 let loadFailed = false;
 
+const seriesLogos = {
+  'eclips-sota-2026': ['ECLIPS', 'eclips.png', 'wide'],
+  'modestep-a38-2026': ['Next Level', 'next-level.webp', 'wide'],
+  'ivy-lab-2026': ['The Hive', 'the-hive.png', 'square'],
+  'boiler-room-worship-2026': ['Boiler Room', 'boiler-room.svg', 'square'],
+  'kanine-2026': ['Bladerunnaz', 'bladerunnaz.png', 'wide'],
+  'beat-safari-zigi-sc-2026': ['Beat Safari', 'beat-safari.jpg', 'square'],
+  'metrik-goddard-emily-makis-2026': ['Bladerunnaz', 'bladerunnaz.png', 'wide'],
+  'bladerunnaz-mozey-2027': ['Bladerunnaz', 'bladerunnaz.png', 'wide'],
+  'kosheen-akvarium-2027': ['IAM Productions', 'iam-productions.jpg', 'square']
+};
+
 function budapestToday() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Budapest', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 }
@@ -176,7 +188,20 @@ function card(event) {
     node('span', '', new Intl.DateTimeFormat(i18n.language === 'en' ? 'en-GB' : 'hu-HU', { month: 'short', timeZone: 'Europe/Budapest' }).format(new Date(`${event.date}T12:00:00+02:00`)).replace('.', '').toUpperCase())
   );
   const body = node('div', 'event-body');
-  body.append(node('h3', '', event.title));
+  const heading = node('div', 'event-heading');
+  const series = seriesLogos[event.id];
+  if (series) {
+    const logo = node('img', `series-logo series-logo--${series[2]}`);
+    logo.src = `assets/series/${series[1]}`;
+    logo.alt = `${series[0]} logo`;
+    logo.width = series[2] === 'wide' ? 98 : 54;
+    logo.height = 54;
+    logo.loading = 'lazy';
+    logo.decoding = 'async';
+    heading.append(logo);
+  }
+  heading.append(node('h3', '', event.title));
+  body.append(heading);
   body.append(artistLine(event));
   body.append(node('p', 'venue', `${event.venue} · ${event.address}`));
 
