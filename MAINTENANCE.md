@@ -16,4 +16,6 @@ Az oldal nem kér fiókot, nevet vagy e-mail-címet. A korábbi nyilvános Wishl
 
 A térkép Leafletet használ a saját `assets/leaflet` mappából, a térképlapok az OpenStreetMap kiszolgálójáról töltődnek be. A szerzői attribúciót ne távolítsd el, és ne vezess be csempék előzetes vagy tömeges letöltését. A helyszínjelölő egy helyen több eseményt is felsorol.
 
+A linkmegosztás borítóképe az `assets/dnb-radar-social.png` fájl. A nyilvános `index.html` elején lévő Open Graph és Twitter Card címkék abszolút `https://dnbradar.com/` képcímet használnak, hogy a közösségi oldalak JavaScript nélkül is beolvassák. Arculatváltáskor a képet és a címkéket együtt frissítsd; a kép generálója a `tools/generate-social-preview.swift` fájlban van.
+
 Az előadói képek a Spotify képkiszolgálójáról töltődnek be; a Spotify külső lejátszója csak az előadói gomb megnyomása után töltődik be. A jegyár nem foglalás vagy ajánlat: a fizetendő végösszeg és a készlet a hivatalos jegyoldalon érvényes.
