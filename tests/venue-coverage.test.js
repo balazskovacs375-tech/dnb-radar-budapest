@@ -19,3 +19,13 @@ test('event ids are stable URL fragments without collisions', () => {
   assert.equal(new Set(ids).size, ids.length);
   assert.ok(ids.every(id => /^[a-z0-9-]+$/.test(id)));
 });
+
+test('free listings have official event links, translations and no ticket price', () => {
+  const free = events.filter(event => event.freeEntry);
+  assert.ok(free.length > 0);
+  for (const event of free) {
+    assert.match(event.url, /^https:\/\//);
+    assert.ok(event.description && event.descriptionEn && event.linkLabelEn);
+    assert.equal(event.price, undefined);
+  }
+});

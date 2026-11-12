@@ -212,6 +212,8 @@ function card(event) {
     price.append(node('strong', '', i18n.language === 'en' ? `From HUF ${amount}` : `${amount} Ft-tól`));
     price.append(node('span', '', i18n.language === 'en' ? `Checked: ${shortDate(event.price.checkedAt)}` : `Ellenőrizve: ${shortDate(event.price.checkedAt)}`));
     actions.append(price);
+  } else if (event.freeEntry) {
+    actions.append(node('strong', 'free-entry', i18n.t('freeEntry')));
   } else if (soldOut) {
     actions.append(node('strong', 'sold-out', i18n.t('soldOut')));
   }
@@ -243,12 +245,12 @@ function card(event) {
   actions.append(secondaryActions);
 
   const details = node('details', 'event-details');
-  details.append(node('summary', '', i18n.t('details')));
+  details.append(node('summary', '', i18n.t(event.freeEntry ? 'freeDetails' : 'details')));
   if (event.description) details.append(node('p', 'event-description', i18n.language === 'en' ? (event.descriptionEn || event.description) : event.description));
   if (currentPrice(event.price)) {
     details.append(node('p', 'price-note', i18n.language === 'en' ? (event.price.noteEn || event.price.note) : event.price.note));
     if (event.price.sourceUrl !== event.url) details.append(link(i18n.t('priceSource'), event.price.sourceUrl, 'price-source'));
-  } else if (!soldOut) {
+  } else if (!soldOut && !event.freeEntry) {
     details.append(node('p', 'price-note', i18n.t('currentPrice')));
   }
   if (event.spotifyArtists?.length) body.append(spotifyPlayer(event.spotifyArtists));

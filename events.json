@@ -74,6 +74,25 @@
       ]
     },
     {
+      "id": "minimus-audio-night-7-2026",
+      "date": "2026-11-14",
+      "time": "22:00",
+      "title": "Minimus Audio Night vol. 7",
+      "artists": [
+        "Vida L",
+        "Longman",
+        "Orlan"
+      ],
+      "venue": "Kassa (Hajó)",
+      "address": "Szilágyi Dezső tér, 1011 Budapest",
+      "url": "https://www.facebook.com/events/1692372325745760/",
+      "linkLabel": "Hivatalos eseményoldal",
+      "linkLabelEn": "Official event page",
+      "description": "A Minimus Audio külön termében Vida L, Longman és Orlan játszik klasszikus neurofunkot, techstepet, deep és minimal drum & basst. A belépés ingyenes.",
+      "descriptionEn": "Vida L, Longman and Orlan play classic neurofunk, techstep, deep and minimal drum & bass in Minimus Audio’s separate room. Entry is free.",
+      "freeEntry": true
+    },
+    {
       "id": "ivy-lab-2026",
       "date": "2026-11-14",
       "time": "23:00",
@@ -237,6 +256,30 @@
           "Facebook": "https://www.facebook.com/yorinobu"
         }
       }
+    },
+    {
+      "id": "found-004-2026",
+      "date": "2026-12-05",
+      "time": "22:00",
+      "title": "FOUND. #004 // Drum & Bass Night",
+      "artists": [
+        "PELSOMATIC",
+        "DEMOTRICK",
+        "LQD",
+        "V150R",
+        "HEES",
+        "IONE",
+        "NANOTIK",
+        "TIBITHEONE"
+      ],
+      "venue": "Kassa (Hajó)",
+      "address": "Szilágyi Dezső tér, 1011 Budapest",
+      "url": "https://www.facebook.com/events/1628366421487048/",
+      "linkLabel": "Hivatalos eseményoldal",
+      "linkLabelEn": "Official event page",
+      "description": "A FOUND. negyedik drum & bass estje a Kassa Panoráma termében: dancefloor, neurofunk, techstep és crossbreed. A belépés ingyenes; a támogatás önkéntes.",
+      "descriptionEn": "FOUND.’s fourth drum & bass night takes place in Kassa’s Panorama room, with dancefloor, neurofunk, techstep and crossbreed. Entry is free; contributions are optional.",
+      "freeEntry": true
     },
     {
       "id": "budapest-jungle-dj-zinc-2026",
