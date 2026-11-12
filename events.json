@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-12",
   "events": [
     {
       "id": "right-time-manic-minds-2026",
@@ -43,10 +43,10 @@
         }
       ],
       "price": {
-        "amountHuf": 7000,
-        "note": "A Cooltix 2nd Release jegye; szolgáltatási díj hozzáadódhat.",
-        "noteEn": "Cooltix 2nd Release ticket; a service fee may be added.",
-        "checkedAt": "2026-11-05",
+        "amountHuf": 8000,
+        "note": "A Cooltix 3rd Release jegye; szolgáltatási díj hozzáadódhat.",
+        "noteEn": "Cooltix 3rd Release ticket; a service fee may be added.",
+        "checkedAt": "2026-11-12",
         "sourceUrl": "https://cooltix.hu/event/6abba6e1cb6a92dc45c58a9b"
       }
     },
@@ -97,10 +97,10 @@
         }
       ],
       "price": {
-        "amountHuf": 7000,
-        "note": "A Cooltix Regular Bee jegye; szolgáltatási díj hozzáadódhat.",
-        "noteEn": "Cooltix Regular Bee ticket; a service fee may be added.",
-        "checkedAt": "2026-11-05",
+        "amountHuf": 8000,
+        "note": "A Cooltix Late Bee jegye; szolgáltatási díj hozzáadódhat.",
+        "noteEn": "Cooltix Late Bee ticket; a service fee may be added.",
+        "checkedAt": "2026-11-12",
         "sourceUrl": "https://cooltix.at/event/6aa93b1db851176d719dc023"
       }
     },
@@ -151,7 +151,7 @@
         "amountHuf": 17000,
         "note": "Időkorlátos jegy: belépés csak 20:00 előtt. Ezen felül rendszerhasználati díj fizetendő.",
         "noteEn": "Time-limited ticket: entry before 20:00 only. An additional booking fee applies.",
-        "checkedAt": "2026-11-05",
+        "checkedAt": "2026-11-12",
         "sourceUrl": "https://direct.oneticket.hu/events/boiler-room-budapest-w-worship"
       }
     },
@@ -211,10 +211,10 @@
         }
       ],
       "price": {
-        "amountHuf": 3500,
-        "note": "Early Bird jegy; a szervező szerint nincs külön kezelési díj.",
-        "noteEn": "Early Bird ticket; according to the organiser, there is no separate handling fee.",
-        "checkedAt": "2026-11-05",
+        "amountHuf": 4500,
+        "note": "Elővételes jegy; a szervező szerint nincs külön kezelési díj.",
+        "noteEn": "Advance ticket; according to the organiser, there is no separate handling fee.",
+        "checkedAt": "2026-11-12",
         "sourceUrl": "https://beatsafaridnb.com/tickets?event=zigi-sc-2026-12-04&lang=hu"
       },
       "artistSocials": {
@@ -237,6 +237,24 @@
           "Facebook": "https://www.facebook.com/yorinobu"
         }
       }
+    },
+    {
+      "id": "budapest-jungle-dj-zinc-2026",
+      "date": "2026-12-12",
+      "time": "23:30",
+      "title": "Budapest Jungle: DJ Zinc",
+      "artists": [
+        "DJ Zinc",
+        "Chris.SU",
+        "DJ Reza",
+        "Statik"
+      ],
+      "venue": "A38 Hajó",
+      "address": "Petőfi híd budai hídfő, 1117 Budapest",
+      "url": "https://bladerunnaz.hu/en/event/budapest-jungle-pres-dj-zinc",
+      "linkLabel": "Hivatalos esemény / jegyek",
+      "description": "DJ Zinc, a Ganja Kru és a True Playaz jungle- és drum & bass úttörője érkezik az A38 Hajóra. Chris.SU, DJ Reza és Statik is fellép.",
+      "descriptionEn": "DJ Zinc, a jungle and drum & bass pioneer associated with Ganja Kru and True Playaz, plays at A38 Ship. Chris.SU, DJ Reza and Statik also perform."
     },
     {
       "id": "right-time-rupture-2026",
@@ -262,7 +280,7 @@
         "amountHuf": 6000,
         "note": "A Cooltix Pre-Sale jegye; szolgáltatási díj hozzáadódhat.",
         "noteEn": "Cooltix Pre-Sale ticket; a service fee may be added.",
-        "checkedAt": "2026-11-05",
+        "checkedAt": "2026-11-12",
         "sourceUrl": "https://cooltix.hu/event/6ab037d32b9a0f466bcd8ca9"
       }
     },
