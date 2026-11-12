@@ -194,11 +194,8 @@ h2{font-family:Manrope,Arial,sans-serif;font-size:clamp(26px,3.3vw,42px);font-we
 .event-body h3{color:#fff}
 .event-link{background:var(--accent);color:#0b0908;font-weight:800;border-color:var(--accent)}
 .event-link:hover{background:#ff665a;color:#0b0908;border-color:#ff665a}
-.event-secondary-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:4px 10px;width:100%}
-.event-secondary-actions a,.event-secondary-actions button{min-height:40px;padding:8px 4px;border:0;background:transparent;color:var(--text);font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
-.event-secondary-actions a:hover,.event-secondary-actions button:hover{color:var(--accent);text-decoration:underline}
-.event-secondary-actions button{cursor:pointer}
-.share-status{width:100%;min-height:1em;color:var(--accent);font-size:11px;overflow-wrap:anywhere}
+.event-map-link{display:flex;align-items:center;justify-content:flex-end;min-height:40px;width:100%;padding:8px 4px;color:var(--text);font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
+.event-map-link:hover{color:var(--accent);text-decoration:underline}
 .playlist-card{border-color:#5a5752;box-shadow:0 9px 24px rgba(0,0,0,.16)}
 .playlist-card:hover,.playlist-card:focus-visible{border-color:var(--accent);background:#1b1716}
 .map-section{padding-top:72px;padding-bottom:78px}
@@ -223,8 +220,7 @@ h2{font-family:Manrope,Arial,sans-serif;font-size:clamp(26px,3.3vw,42px);font-we
 .map-popup .map-directions{margin-top:3px;padding-top:9px;border-top:1px solid #555;color:var(--accent);font-weight:700}
 .map-fallback{padding:20px;border:1px solid var(--line);color:var(--muted);font-size:13px}
 @media(max-width:760px){
-  .event-secondary-actions{justify-content:flex-start;gap:6px 20px}
-  .event-secondary-actions a,.event-secondary-actions button{min-height:44px}
+  .event-map-link{justify-content:flex-start;min-height:44px}
   .map-section{padding-top:52px;padding-bottom:60px}
   .map-heading{display:block;margin-bottom:18px}
   .map-overline{display:block;margin-bottom:10px}

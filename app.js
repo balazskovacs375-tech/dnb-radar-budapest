@@ -2,7 +2,6 @@ const list = document.getElementById('event-list');
 const empty = document.getElementById('empty');
 const updated = document.getElementById('updated');
 const i18n = window.dnbI18n;
-const eventTools = window.dnbEventTools;
 let events = [];
 let checkedAt = '';
 let loadFailed = false;
@@ -203,7 +202,8 @@ function card(event) {
   heading.append(node('h3', '', event.title));
   body.append(heading);
   body.append(artistLine(event));
-  body.append(node('p', 'venue', `${event.venue} · ${event.address}`));
+  const room = i18n.language === 'en' ? (event.roomEn || event.room) : event.room;
+  body.append(node('p', 'venue', [event.venue, room, event.address].filter(Boolean).join(' · ')));
 
   const actions = node('div', 'event-actions');
   if (currentPrice(event.price)) {
@@ -221,28 +221,12 @@ function card(event) {
   const official = link(`${label} ↗`, event.url, 'event-link');
   official.setAttribute('aria-label', i18n.language === 'en' ? `${event.title} – ${label}, opens in a new tab` : `${event.title} – ${label}, új lapon nyílik`);
   actions.append(official);
-  const secondaryActions = node('div', 'event-secondary-actions');
-  const mapLink = node('a', '', i18n.t('showOnMap'));
+  const mapLink = node('a', 'event-map-link', i18n.t('showOnMap'));
   mapLink.href = '#terkep';
   mapLink.addEventListener('click', () => {
     window.setTimeout(() => window.dnbMap?.focusVenue(event.venue), 450);
   });
-  const share = node('button', '', i18n.t('shareEvent'));
-  share.type = 'button';
-  share.setAttribute('aria-label', `${i18n.t('shareEvent')}: ${event.title}`);
-  const shareStatus = node('span', 'share-status');
-  shareStatus.setAttribute('role', 'status');
-  share.addEventListener('click', async () => {
-    const url = eventTools.permalink(event.id, location.href);
-    try {
-      await navigator.clipboard.writeText(url);
-      shareStatus.textContent = i18n.t('linkCopied');
-    } catch (_) {
-      shareStatus.textContent = url;
-    }
-  });
-  secondaryActions.append(mapLink, share, shareStatus);
-  actions.append(secondaryActions);
+  actions.append(mapLink);
 
   const details = node('details', 'event-details');
   details.append(node('summary', '', i18n.t(event.freeEntry ? 'freeDetails' : 'details')));
